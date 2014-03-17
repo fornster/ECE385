@@ -59,7 +59,7 @@ end ISDU;
 
 architecture Behavioral of ISDU is
 
-type ctrl_state is (Halted, PauseIR1, PauseIR2, S_18, S_33_1, S_33_2, S_35, S_32, S_01);
+type ctrl_state is (Halted, PauseIR1, PauseIR2, PCtoMAR, LoadMDR, LoadMDR_2, LoadIR, Decode, add0, and0, not0, BR0, JMP0, JSR0, LDR0, LDR1, STR0, STR1);
 signal State, Next_state : ctrl_state;
 
 begin
@@ -80,17 +80,17 @@ begin
       if (run = '0') then
         Next_state <= Halted;
       else
-        Next_state <= S_18;
+        Next_state <= PCtoMAR;
       end if;
-    when S_18 =>
-      Next_state <= S_33_1;
-    when S_33_1 =>
-      Next_state <= S_33_2;
-    when S_33_2 =>
-      Next_state <= S_35;
-    when S_35 =>
+    when PCtoMAR =>
+      Next_state <= LoadMDR;
+    when LoadMDR =>
+      Next_state <= LoadMDR_2;
+    when LoadMDR_2 =>
+      Next_state <= LoadIR;
+    when LoadIR =>
       Next_state <= PauseIR1;
-      -- Next_state <= S_32;  -- Bypass PauseIR in Week 2.
+      -- Next_state <= Decode;  -- Bypass PauseIR in Week 2.
     when PauseIR1 =>  -- Pause to display IR on HEX. (Week 1)
       if (ContinueIR = '0') then
         Next_state <= PauseIR1;
@@ -101,17 +101,27 @@ begin
       if (ContinueIR = '1') then
         Next_state <= PauseIR2;
       else
-        Next_state <= S_32;
+        Next_state <= Decode;
       end if;
-    when S_32 =>
+    when Decode =>
       case Opcode is
         when "0001" =>  -- ADD 
-          Next_state <= S_01;
+          Next_state <= add0;
+			when "0101" => --AND
+				Next_state <= and0;
+			when "1001" => --NOT
+				Next_state <= not0;
+			when "0000" => --BR
+				Next_state <= BR0;
+			when "0110" => --LDR
+				Next_state <= LDR0;
+			when "0111" => --str
+				Next_state <= STR0;
         when others =>
-          Next_state <= S_18;
+          Next_state <= PCtoMAR;
       end case;
-    when S_01 =>
-      Next_state <= S_18;
+    when add0 =>
+      Next_state <= PCtoMAR;
     when others =>
       NULL;
   end case;
@@ -147,24 +157,24 @@ begin
 
   case State is
     when Halted =>    -- Do nothing
-    when S_18 =>      -- Fetch 1 (Week 1)
+    when PCtoMAR =>      -- Fetch 1 (Week 1)
       GatePC <= '1';     -- PC drives bus,
       LD_MAR <= '1';     --   loaded into MAR
       PCMUX <= "00";     -- PC loads from PC+1 entity
       LD_PC <= '1';
-    when S_33_1 =>    -- Fetch 2 (Week 1)
+    when LoadMDR =>    -- Fetch 2 (Week 1)
       Mem_OE <= '0';     -- Memory bus driven by Memory; also, MDRMUX takes data from memory bus
-    when S_33_2 =>    -- Fetch 3 (Week 1)
+    when LoadMDR_2 =>    -- Fetch 3 (Week 1)
       Mem_OE <= '0';     -- Memory bus still driven by Memory
       LD_MDR <= '1';     -- Load MDR from memory bus
-    when S_35 =>      -- Fetch 4 (Week 1)
+    when LoadIR =>      -- Fetch 4 (Week 1)
       GateMDR <= '1';    -- MDR drives bus,
       LD_IR <= '1';      --   loaded into IR
     when PauseIR1 =>  -- No control signals. IR should be displayed on HEX4-HEX7. (Week 1)
     when PauseIR2 =>  -- No control signals. (Week 1)
-    when S_32 =>      -- Instruction Decode
+    when Decode =>      -- Instruction Decode
       LD_BEN <= '1';     -- Load the BEN register (not shown on given BD)
-    when S_01 =>      -- Op ADD
+    when add0 =>      -- Op ADD
       SR2MUX <= IR_5;    -- Selects between value from regfile or sign-extended immediate value
       ALUK <= "00";      -- ALU perfroms addition; other functions are AND, NOT, and PASS
       GateALU <= '1';    -- ALU drives bus
