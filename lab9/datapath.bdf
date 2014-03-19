@@ -1361,6 +1361,38 @@ applicable agreement for further details.
 	(pt 576 408)
 	(pt 328 408)
 )
+(connector
+	(pt -8 304)
+	(pt -8 288)
+)
+(connector
+	(pt -16 304)
+	(pt -8 304)
+)
+(connector
+	(pt -8 288)
+	(pt 344 288)
+)
+(connector
+	(pt -16 200)
+	(pt 664 200)
+)
+(connector
+	(pt 664 200)
+	(pt 664 40)
+)
+(connector
+	(pt 664 40)
+	(pt 920 40)
+)
+(connector
+	(pt 920 40)
+	(pt 920 -48)
+)
+(connector
+	(pt 920 -48)
+	(pt 976 -48)
+)
 (junction (pt 704 760))
 (junction (pt 704 784))
 (junction (pt 1192 -64))
