@@ -1,0 +1,48 @@
+# Reading E:/Altera13/modelsim_ase/tcl/vsim/pref.tcl 
+# do lab8_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying E:\Altera13\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:\Altera13\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {E:/altera/13.0/lab9_vga_vhdl_Spring2014/VGA_controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity vga_controller
+# -- Compiling architecture Behavioral of vga_controller
+# vcom -93 -work work {E:/altera/13.0/lab9_vga_vhdl_Spring2014/Color_Mapper.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity Color_Mapper
+# -- Compiling architecture Behavioral of Color_Mapper
+# vcom -93 -work work {E:/altera/13.0/lab9_vga_vhdl_Spring2014/BouncingBall.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity BouncingBall
+# -- Compiling architecture Behavioral of BouncingBall
+# vcom -93 -work work {E:/altera/13.0/lab9_vga_vhdl_Spring2014/ball.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity ball
+# -- Compiling architecture Behavioral of ball

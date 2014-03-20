@@ -10,5 +10,5 @@ end entity;
 
 architecture behavioral of plus2 is
 begin
-	dataOut <= dataIn + 2;
+	dataOut <= dataIn + 1;
 end behavioral;

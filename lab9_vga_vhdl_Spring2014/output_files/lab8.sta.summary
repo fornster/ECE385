@@ -1,0 +1,157 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'keyboard:inst1|clkDiv:inst|temp'
+Slack : -4.035
+TNS   : -33.367
+
+Type  : Slow Model Setup 'BouncingBall:inst|vga_controller:vgaSync_instance|vs'
+Slack : -3.887
+TNS   : -51.425
+
+Type  : Slow Model Setup 'BouncingBall:inst|vga_controller:vgaSync_instance|clkdiv'
+Slack : -2.099
+TNS   : -35.046
+
+Type  : Slow Model Setup 'keyboard:inst1|psclk:inst2|Dreg:reg1|Q'
+Slack : -1.592
+TNS   : -17.748
+
+Type  : Slow Model Setup 'Clk'
+Slack : -0.931
+TNS   : -5.716
+
+Type  : Slow Model Hold 'Clk'
+Slack : -2.558
+TNS   : -5.116
+
+Type  : Slow Model Hold 'keyboard:inst1|clkDiv:inst|temp'
+Slack : -0.240
+TNS   : -0.240
+
+Type  : Slow Model Hold 'BouncingBall:inst|vga_controller:vgaSync_instance|vs'
+Slack : -0.092
+TNS   : -0.168
+
+Type  : Slow Model Hold 'keyboard:inst1|psclk:inst2|Dreg:reg1|Q'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'BouncingBall:inst|vga_controller:vgaSync_instance|clkdiv'
+Slack : 0.809
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'BouncingBall:inst|vga_controller:vgaSync_instance|vs'
+Slack : -0.660
+TNS   : -0.660
+
+Type  : Slow Model Recovery 'keyboard:inst1|psclk:inst2|Dreg:reg1|Q'
+Slack : -0.265
+TNS   : -0.265
+
+Type  : Slow Model Removal 'keyboard:inst1|psclk:inst2|Dreg:reg1|Q'
+Slack : 1.035
+TNS   : 0.000
+
+Type  : Slow Model Removal 'BouncingBall:inst|vga_controller:vgaSync_instance|vs'
+Slack : 1.289
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'Clk'
+Slack : -1.380
+TNS   : -11.380
+
+Type  : Slow Model Minimum Pulse Width 'BouncingBall:inst|vga_controller:vgaSync_instance|vs'
+Slack : -0.500
+TNS   : -31.000
+
+Type  : Slow Model Minimum Pulse Width 'BouncingBall:inst|vga_controller:vgaSync_instance|clkdiv'
+Slack : -0.500
+TNS   : -22.000
+
+Type  : Slow Model Minimum Pulse Width 'keyboard:inst1|psclk:inst2|Dreg:reg1|Q'
+Slack : -0.500
+TNS   : -22.000
+
+Type  : Slow Model Minimum Pulse Width 'keyboard:inst1|clkDiv:inst|temp'
+Slack : -0.500
+TNS   : -12.000
+
+Type  : Fast Model Setup 'keyboard:inst1|clkDiv:inst|temp'
+Slack : -1.537
+TNS   : -12.666
+
+Type  : Fast Model Setup 'BouncingBall:inst|vga_controller:vgaSync_instance|vs'
+Slack : -1.178
+TNS   : -8.499
+
+Type  : Fast Model Setup 'BouncingBall:inst|vga_controller:vgaSync_instance|clkdiv'
+Slack : -0.459
+TNS   : -6.144
+
+Type  : Fast Model Setup 'keyboard:inst1|psclk:inst2|Dreg:reg1|Q'
+Slack : -0.261
+TNS   : -2.124
+
+Type  : Fast Model Setup 'Clk'
+Slack : 0.100
+TNS   : 0.000
+
+Type  : Fast Model Hold 'Clk'
+Slack : -1.599
+TNS   : -3.198
+
+Type  : Fast Model Hold 'keyboard:inst1|clkDiv:inst|temp'
+Slack : -0.193
+TNS   : -0.193
+
+Type  : Fast Model Hold 'BouncingBall:inst|vga_controller:vgaSync_instance|vs'
+Slack : -0.067
+TNS   : -0.124
+
+Type  : Fast Model Hold 'keyboard:inst1|psclk:inst2|Dreg:reg1|Q'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'BouncingBall:inst|vga_controller:vgaSync_instance|clkdiv'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'BouncingBall:inst|vga_controller:vgaSync_instance|vs'
+Slack : 0.134
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'keyboard:inst1|psclk:inst2|Dreg:reg1|Q'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Fast Model Removal 'keyboard:inst1|psclk:inst2|Dreg:reg1|Q'
+Slack : 0.583
+TNS   : 0.000
+
+Type  : Fast Model Removal 'BouncingBall:inst|vga_controller:vgaSync_instance|vs'
+Slack : 0.719
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'Clk'
+Slack : -1.380
+TNS   : -11.380
+
+Type  : Fast Model Minimum Pulse Width 'BouncingBall:inst|vga_controller:vgaSync_instance|vs'
+Slack : -0.500
+TNS   : -31.000
+
+Type  : Fast Model Minimum Pulse Width 'BouncingBall:inst|vga_controller:vgaSync_instance|clkdiv'
+Slack : -0.500
+TNS   : -22.000
+
+Type  : Fast Model Minimum Pulse Width 'keyboard:inst1|psclk:inst2|Dreg:reg1|Q'
+Slack : -0.500
+TNS   : -22.000
+
+Type  : Fast Model Minimum Pulse Width 'keyboard:inst1|clkDiv:inst|temp'
+Slack : -0.500
+TNS   : -12.000
+
+------------------------------------------------------------

@@ -1,0 +1,120 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 264 272)
+	(text "BouncingBall" (rect 5 0 67 12)(font "Arial" ))
+	(text "inst" (rect 8 192 25 204)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Clk" (rect 0 0 16 12)(font "Arial" ))
+		(text "Clk" (rect 21 27 37 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Reset" (rect 0 0 29 12)(font "Arial" ))
+		(text "Reset" (rect 21 43 50 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "newKey" (rect 0 0 38 12)(font "Arial" ))
+		(text "newKey" (rect 21 59 59 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "keyCode[7..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "keyCode[7..0]" (rect 21 75 91 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 200 32)
+		(output)
+		(text "Red[9..0]" (rect 0 0 46 12)(font "Arial" ))
+		(text "Red[9..0]" (rect 141 27 179 39)(font "Arial" ))
+		(line (pt 200 32)(pt 184 32)(line_width 3))
+	)
+	(port
+		(pt 200 48)
+		(output)
+		(text "Green[9..0]" (rect 0 0 55 12)(font "Arial" ))
+		(text "Green[9..0]" (rect 133 43 179 55)(font "Arial" ))
+		(line (pt 200 48)(pt 184 48)(line_width 3))
+	)
+	(port
+		(pt 200 64)
+		(output)
+		(text "Blue[9..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "Blue[9..0]" (rect 140 59 179 71)(font "Arial" ))
+		(line (pt 200 64)(pt 184 64)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(output)
+		(text "keyAck" (rect 0 0 37 12)(font "Arial" ))
+		(text "keyAck" (rect 24 136 61 148)(font "Arial" ))
+		(line (pt 16 144)(pt 0 144))
+	)
+	(port
+		(pt 200 80)
+		(output)
+		(text "VGA_clk" (rect 0 0 42 12)(font "Arial" ))
+		(text "VGA_clk" (rect 144 75 179 87)(font "Arial" ))
+		(line (pt 200 80)(pt 184 80))
+	)
+	(port
+		(pt 200 96)
+		(output)
+		(text "sync" (rect 0 0 24 12)(font "Arial" ))
+		(text "sync" (rect 159 91 179 103)(font "Arial" ))
+		(line (pt 200 96)(pt 184 96))
+	)
+	(port
+		(pt 200 112)
+		(output)
+		(text "blank" (rect 0 0 25 12)(font "Arial" ))
+		(text "blank" (rect 158 107 179 119)(font "Arial" ))
+		(line (pt 200 112)(pt 184 112))
+	)
+	(port
+		(pt 200 128)
+		(output)
+		(text "vs" (rect 0 0 12 12)(font "Arial" ))
+		(text "vs" (rect 169 123 179 135)(font "Arial" ))
+		(line (pt 200 128)(pt 184 128))
+	)
+	(port
+		(pt 200 144)
+		(output)
+		(text "hs" (rect 0 0 11 12)(font "Arial" ))
+		(text "hs" (rect 170 139 179 151)(font "Arial" ))
+		(line (pt 200 144)(pt 184 144))
+	)
+	(drawing
+		(rectangle (rect 16 16 184 192))
+	)
+)

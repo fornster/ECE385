@@ -1,0 +1,12 @@
+
+State Machine - |lab8|keyboard:inst1|keyMap:inst3|state
+Name state.dEnd state.sEnd state.aEnd state.wEnd state.d state.s state.a state.w state.idle 
+state.idle 0 0 0 0 0 0 0 0 0 
+state.w 0 0 0 0 0 0 0 1 1 
+state.a 0 0 0 0 0 0 1 0 1 
+state.s 0 0 0 0 0 1 0 0 1 
+state.d 0 0 0 0 1 0 0 0 1 
+state.wEnd 0 0 0 1 0 0 0 0 1 
+state.aEnd 0 0 1 0 0 0 0 0 1 
+state.sEnd 0 1 0 0 0 0 0 0 1 
+state.dEnd 1 0 0 0 0 0 0 0 1 

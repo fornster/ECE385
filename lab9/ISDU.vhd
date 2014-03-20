@@ -101,7 +101,7 @@ begin
       if (ContinueIR = '1') then
         Next_state <= PauseIR2;
       else
-        Next_state <= Decode;
+        Next_state <= PCtoMAR;
       end if;
     when Decode =>
       case Opcode is
