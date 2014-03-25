@@ -89,8 +89,8 @@ begin
     when LoadMDR_2 =>
       Next_state <= LoadIR;
     when LoadIR =>
-      Next_state <= PauseIR1;
-      -- Next_state <= Decode;  -- Bypass PauseIR in Week 2.
+      --Next_state <= PauseIR1;
+      Next_state <= Decode;  -- Bypass PauseIR in Week 2.
     when PauseIR1 =>  -- Pause to display IR on HEX. (Week 1)
       if (ContinueIR = '0') then
         Next_state <= PauseIR1;
