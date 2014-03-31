@@ -179,6 +179,15 @@ begin
       ALUK <= "00";      -- ALU perfroms addition; other functions are AND, NOT, and PASS
       GateALU <= '1';    -- ALU drives bus
       LD_REG <= '1';     -- Store result to Regfile
+	 when and0 =>
+		SR2MUX <= IR_5;    -- Selects between value from regfile or sign-extended immediate value
+      ALUK <= "01";      -- ALU perfroms AND
+      GateALU <= '1';    -- ALU drives bus
+      LD_REG <= '1';     -- Store result to Regfile
+	 when not0 =>
+		ALUK <= "10";
+		GateALU <= '1';
+		LD_REG <= '1';
     when others =>
       NULL;
   end case;
