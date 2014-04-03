@@ -1,21 +1,25 @@
 
 State Machine - |datapath|ISDU:Control|State
-Name State.STR1 State.STR0 State.LDR1 State.LDR0 State.JSR0 State.JMP0 State.BR0 State.not0 State.and0 State.add0 State.Decode State.LoadIR State.LoadMDR_2 State.LoadMDR State.PCtoMAR State.PauseIR2 State.PauseIR1 State.Halted 
-State.Halted 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-State.PauseIR1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-State.PauseIR2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-State.PCtoMAR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-State.LoadMDR 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-State.LoadMDR_2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-State.LoadIR 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-State.Decode 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-State.add0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-State.and0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-State.not0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-State.BR0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-State.JMP0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-State.JSR0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-State.LDR0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-State.LDR1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-State.STR0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-State.STR1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Name State.STR3 State.STR2 State.STR1 State.STR0 State.LDR3 State.LDR2 State.LDR1 State.LDR0 State.JSR0 State.JMP0 State.BR0 State.not0 State.and0 State.add0 State.Decode State.LoadIR State.LoadMDR_2 State.LoadMDR State.PCtoMAR State.PauseIR2 State.PauseIR1 State.Halted 
+State.Halted 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+State.PauseIR1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+State.PauseIR2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+State.PCtoMAR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+State.LoadMDR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+State.LoadMDR_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+State.LoadIR 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+State.Decode 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+State.add0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+State.and0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+State.not0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+State.BR0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+State.JMP0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+State.JSR0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.LDR0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.LDR1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.LDR2 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.LDR3 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.STR0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.STR1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.STR2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.STR3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

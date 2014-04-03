@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 184 312 352 328)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "DataBus[15..0]" (rect 5 0 80 12)(font "Arial" ))
+	(text "DataBus[15..0]" (rect 5 0 79 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -39,7 +39,7 @@ applicable agreement for further details.
 	(input)
 	(rect 176 336 344 352)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "RegA[15..0]" (rect 5 0 65 12)(font "Arial" ))
+	(text "RegA[15..0]" (rect 5 0 64 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -55,7 +55,7 @@ applicable agreement for further details.
 	(input)
 	(rect 168 360 344 376)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "ADDRadd[15..0]" (rect 5 0 87 12)(font "Arial" ))
+	(text "ADDRadd[15..0]" (rect 5 0 86 12)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -71,7 +71,7 @@ applicable agreement for further details.
 	(input)
 	(rect 168 392 344 408)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "PCMuxSel[1..0]" (rect 5 0 82 12)(font "Arial" ))
+	(text "PCMuxSel[1..0]" (rect 5 0 81 12)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -87,7 +87,7 @@ applicable agreement for further details.
 	(input)
 	(rect 640 312 808 328)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "reset" (rect 5 0 30 12)(font "Arial" ))
+	(text "reset" (rect 5 0 29 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -98,12 +98,13 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 584 328 640 344))
 )
 (pin
 	(input)
 	(rect 632 336 800 352)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "PCld" (rect 5 0 29 12)(font "Arial" ))
+	(text "PCld" (rect 5 0 28 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -119,7 +120,7 @@ applicable agreement for further details.
 	(input)
 	(rect 632 360 800 376)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "clk" (rect 5 0 20 12)(font "Arial" ))
+	(text "clk" (rect 5 0 19 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -130,12 +131,13 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 576 376 632 392))
 )
 (pin
 	(output)
 	(rect 1144 296 1320 312)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "PC" (rect 90 0 105 12)(font "Arial" ))
+	(text "PC[15..0]" (rect 90 0 137 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))

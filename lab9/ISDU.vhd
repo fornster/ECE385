@@ -59,7 +59,7 @@ end ISDU;
 
 architecture Behavioral of ISDU is
 
-type ctrl_state is (Halted, PauseIR1, PauseIR2, PCtoMAR, LoadMDR, LoadMDR_2, LoadIR, Decode, add0, and0, not0, BR0, JMP0, JSR0, LDR0, LDR1, STR0, STR1);
+type ctrl_state is (Halted, PauseIR1, PauseIR2, PCtoMAR, LoadMDR, LoadMDR_2, LoadIR, Decode, add0, and0, not0, BR0, JMP0, JSR0, JSR1, LDR0, LDR1, LDR2, LDR3, STR0, STR1, STR2, STR3);
 signal State, Next_state : ctrl_state;
 
 begin
@@ -111,17 +111,47 @@ begin
 				Next_state <= and0;
 			when "1001" => --NOT
 				Next_state <= not0;
-			when "0000" => --BR
-				Next_state <= BR0;
+			---when "0000" => --BR
+				---Next_state <= BR0;
 			when "0110" => --LDR
 				Next_state <= LDR0;
 			when "0111" => --str
 				Next_state <= STR0;
+			when "1101" => --pause
+				next_state <= pauseIR1;
+			when "1100" => ---jmp
+				next_state <= jmp0;
+			when "0100" => ---jsr
+				next_state <= jsr0;
         when others =>
           Next_state <= PCtoMAR;
       end case;
     when add0 =>
       Next_state <= PCtoMAR;
+	 when str0 =>
+		Next_state <= str1;
+	 when str1 =>
+		Next_state <= str2;
+	 when str2 =>
+		Next_state <= str3;
+	 when str3 =>
+		Next_state <= PCtoMAR;
+	 when not0 =>
+		next_state <= PCtoMAR;
+	 when ldr0 =>
+		next_state <= ldr1;
+	 when ldr1 =>
+		next_state <= ldr2;
+	 when ldr2 =>
+		next_state <= ldr3;
+	 when ldr3 =>
+		next_state <= PCtoMAR;
+	 when jsr0 =>
+		next_state <= jsr1;
+	 when jsr1 =>
+		next_state <= PCtoMAR;
+	 when jmp0 =>
+		next_state <= PCtoMAR;
     when others =>
       NULL;
   end case;
@@ -188,6 +218,40 @@ begin
 		ALUK <= "10";
 		GateALU <= '1';
 		LD_REG <= '1';
+	 when str0 =>
+		ADDR2MUX <= "10";
+		ld_MAR <= '1';
+		gateMARMUX <= '1';
+	 when str1 =>
+		ALUK <= "11";
+		SR1MUX <= "01";
+		GateALU <= '1';
+		LD_MDR <= '1';
+	 when str2 =>
+		Mem_WE <= '0';
+	 when str3 => 
+		mem_WE <= '0';
+	 when ldr0 =>
+		ADDR2MUX <= "10";
+		LD_MAR <= '1';
+		gateALU <= '1';
+	 when ldr1 =>
+		Mem_OE <= '0';
+	 when ldr2 =>
+		Mem_OE <= '0';
+		ld_MDR <= '1';
+	 when ldr3 =>
+		gateMDR <= '1';
+		ld_reg <= '1';
+	 when jsr0 =>
+		GatePC <= '1';
+		ld_reg <= '1';
+		DRmUX <= "01";
+	 when jsr1 =>
+		ld_PC <= '1';
+	 when jmp0 =>
+		ld_PC <= '1';
+		PCMUX <= "10";
     when others =>
       NULL;
   end case;

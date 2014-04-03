@@ -1,5 +1,5 @@
 Flow report for slc3
-Wed Apr 02 22:11:04 2014
+Thu Apr 03 01:34:33 2014
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Wed Apr 02 22:11:04 2014      ;
+; Flow Status                        ; Successful - Thu Apr 03 01:34:33 2014      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; slc3                                       ;
 ; Top-level Entity Name              ; datapath                                   ;
 ; Family                             ; Cyclone II                                 ;
 ; Device                             ; EP2C35F672C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 424 / 33,216 ( 1 % )                       ;
-;     Total combinational functions  ; 359 / 33,216 ( 1 % )                       ;
-;     Dedicated logic registers      ; 234 / 33,216 ( < 1 % )                     ;
-; Total registers                    ; 234                                        ;
+; Total logic elements               ; 491 / 33,216 ( 1 % )                       ;
+;     Total combinational functions  ; 412 / 33,216 ( 1 % )                       ;
+;     Dedicated logic registers      ; 258 / 33,216 ( < 1 % )                     ;
+; Total registers                    ; 258                                        ;
 ; Total pins                         ; 87 / 475 ( 18 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                        ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/02/2014 22:10:45 ;
+; Start date & time ; 04/03/2014 01:34:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; slc3                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 92378956297478.139649464509020 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 92378956297478.139650685508848 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)         ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --            ; --          ; --             ;
@@ -93,12 +93,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 476 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:09     ; 1.0                     ; 665 MB              ; 00:00:09                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 417 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 406 MB              ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 490 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:09     ; 1.0                     ; 662 MB              ; 00:00:09                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 413 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 410 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 385 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:15     ; --                      ; --                  ; 00:00:15                           ;
+; Total                     ; 00:00:14     ; --                      ; --                  ; 00:00:15                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

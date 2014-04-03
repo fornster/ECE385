@@ -1,0 +1,106 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 288 256)
+	(text "regStruct" (rect 5 0 58 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 176 25 188)(font "Arial" ))
+	(port
+		(pt 112 0)
+		(input)
+		(text "reset" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "reset" (rect 104 25 118 54)(font "Arial" (font_size 8))(vertical))
+		(line (pt 112 0)(pt 112 17))
+	)
+	(port
+		(pt 80 0)
+		(input)
+		(text "clk" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "clk" (rect 72 25 86 40)(font "Arial" (font_size 8))(vertical))
+		(line (pt 80 0)(pt 80 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "DR[2..0]" (rect 0 0 44 14)(font "Arial" (font_size 8)))
+		(text "DR[2..0]" (rect 21 27 65 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "DRMuxSel[1..0]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "DRMuxSel[1..0]" (rect 21 123 107 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "SR1[2..0]" (rect 0 0 51 14)(font "Arial" (font_size 8)))
+		(text "SR1[2..0]" (rect 21 51 72 65)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 16 56)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "SR1MuxSel[1..0]" (rect 0 0 93 14)(font "Arial" (font_size 8)))
+		(text "SR1MuxSel[1..0]" (rect 21 139 114 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "SR2[2..0]" (rect 0 0 51 14)(font "Arial" (font_size 8)))
+		(text "SR2[2..0]" (rect 21 83 72 97)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 16 88)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "LDR" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "LDR" (rect 21 155 44 169)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 112 192)
+		(input)
+		(text "DataIn[15..0]" (rect 0 0 70 14)(font "Arial" (font_size 8)))
+		(text "DataIn[15..0]" (rect 104 96 118 166)(font "Arial" (font_size 8))(vertical))
+		(line (pt 112 192)(pt 112 176)(line_width 3))
+	)
+	(port
+		(pt 224 72)
+		(output)
+		(text "SR1out[15..0]" (rect 0 0 76 14)(font "Arial" (font_size 8)))
+		(text "SR1out[15..0]" (rect 127 67 203 81)(font "Arial" (font_size 8)))
+		(line (pt 224 72)(pt 208 72)(line_width 3))
+	)
+	(port
+		(pt 224 144)
+		(output)
+		(text "SR2out[15..0]" (rect 0 0 76 14)(font "Arial" (font_size 8)))
+		(text "SR2out[15..0]" (rect 127 139 203 153)(font "Arial" (font_size 8)))
+		(line (pt 224 144)(pt 208 144)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 208 176))
+	)
+)

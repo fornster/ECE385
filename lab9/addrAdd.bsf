@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 224 176)
+	(rect 16 16 232 176)
 	(text "addrAdd" (rect 5 0 54 14)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 144 25 156)(font "Arial" ))
 	(port
@@ -68,18 +68,18 @@ applicable agreement for further details.
 	(port
 		(pt 0 128)
 		(input)
-		(text "ADDR2 sel" (rect 0 0 61 14)(font "Arial" (font_size 8)))
-		(text "ADDR2 sel" (rect 21 123 82 137)(font "Arial" (font_size 8)))
-		(line (pt 0 128)(pt 16 128))
+		(text "ADDR2sel[1..0]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "ADDR2sel[1..0]" (rect 21 123 107 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
 	)
 	(port
-		(pt 208 32)
+		(pt 216 32)
 		(output)
 		(text "ADDR2[15..0]" (rect 0 0 76 14)(font "Arial" (font_size 8)))
-		(text "ADDR2[15..0]" (rect 111 27 187 41)(font "Arial" (font_size 8)))
-		(line (pt 208 32)(pt 192 32)(line_width 3))
+		(text "ADDR2[15..0]" (rect 119 27 195 41)(font "Arial" (font_size 8)))
+		(line (pt 216 32)(pt 200 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 192 144))
+		(rectangle (rect 16 16 200 144))
 	)
 )

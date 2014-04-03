@@ -3,74 +3,50 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'clk'
-Slack : -6.264
-TNS   : -1116.782
+Slack : -6.900
+TNS   : -1347.225
 
-Type  : Slow Model Setup 'ISDU:Control|State.Decode'
-Slack : -1.461
-TNS   : -7.889
-
-Type  : Slow Model Setup 'ISDU:Control|State.add0'
-Slack : -1.011
-TNS   : -5.606
-
-Type  : Slow Model Hold 'ISDU:Control|State.add0'
-Slack : -3.496
-TNS   : -13.958
-
-Type  : Slow Model Hold 'ISDU:Control|State.Decode'
-Slack : -2.991
-TNS   : -10.642
+Type  : Slow Model Setup 'ISDU:Control|State.BR0'
+Slack : -2.766
+TNS   : -28.519
 
 Type  : Slow Model Hold 'clk'
-Slack : -0.606
-TNS   : -3.488
+Slack : -0.819
+TNS   : -1.425
+
+Type  : Slow Model Hold 'ISDU:Control|State.BR0'
+Slack : 0.323
+TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'clk'
 Slack : -1.380
-TNS   : -235.380
+TNS   : -259.380
 
-Type  : Slow Model Minimum Pulse Width 'ISDU:Control|State.Decode'
-Slack : 0.500
-TNS   : 0.000
-
-Type  : Slow Model Minimum Pulse Width 'ISDU:Control|State.add0'
+Type  : Slow Model Minimum Pulse Width 'ISDU:Control|State.BR0'
 Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast Model Setup 'clk'
-Slack : -2.102
-TNS   : -343.645
+Slack : -2.433
+TNS   : -449.908
 
-Type  : Fast Model Setup 'ISDU:Control|State.Decode'
-Slack : -0.462
-TNS   : -1.677
-
-Type  : Fast Model Setup 'ISDU:Control|State.add0'
-Slack : -0.212
-TNS   : -0.797
-
-Type  : Fast Model Hold 'ISDU:Control|State.add0'
-Slack : -1.946
-TNS   : -7.759
-
-Type  : Fast Model Hold 'ISDU:Control|State.Decode'
-Slack : -1.696
-TNS   : -6.509
+Type  : Fast Model Setup 'ISDU:Control|State.BR0'
+Slack : -0.819
+TNS   : -6.669
 
 Type  : Fast Model Hold 'clk'
-Slack : -0.797
-TNS   : -40.258
+Slack : -0.455
+TNS   : -2.237
+
+Type  : Fast Model Hold 'ISDU:Control|State.BR0'
+Slack : 0.352
+TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -1.380
-TNS   : -235.380
+TNS   : -259.380
 
-Type  : Fast Model Minimum Pulse Width 'ISDU:Control|State.Decode'
-Slack : 0.500
-TNS   : 0.000
-
-Type  : Fast Model Minimum Pulse Width 'ISDU:Control|State.add0'
+Type  : Fast Model Minimum Pulse Width 'ISDU:Control|State.BR0'
 Slack : 0.500
 TNS   : 0.000
 

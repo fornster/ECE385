@@ -37,9 +37,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 232 136 400 152)
+	(rect 144 168 312 184)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "SR1[15..0]" (rect 5 0 59 12)(font "Arial" ))
+	(text "SR1[15..0]" (rect 5 0 58 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -53,9 +53,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 240 160 408 176)
+	(rect 136 144 304 160)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "PC[15..0]" (rect 5 0 53 12)(font "Arial" ))
+	(text "PC[15..0]" (rect 5 0 52 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -87,7 +87,7 @@ applicable agreement for further details.
 	(input)
 	(rect 240 248 408 264)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Sext11[15..0]" (rect 5 0 72 12)(font "Arial" ))
+	(text "Sext11[15..0]" (rect 5 0 71 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -103,7 +103,7 @@ applicable agreement for further details.
 	(input)
 	(rect 248 296 416 312)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "SEXT6[15..0]" (rect 5 0 69 12)(font "Arial" ))
+	(text "SEXT6[15..0]" (rect 5 0 68 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -117,19 +117,19 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 248 352 416 368)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "ADDR2 sel" (rect 5 0 61 12)(font "Arial" ))
-	(pt 168 8)
+	(rect 240 352 416 368)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "ADDR2sel[1..0]" (rect 5 0 83 12)(font "Arial" ))
+	(pt 176 8)
 	(drawing
-		(line (pt 84 12)(pt 109 12))
-		(line (pt 84 4)(pt 109 4))
-		(line (pt 113 8)(pt 168 8))
-		(line (pt 84 12)(pt 84 4))
-		(line (pt 109 4)(pt 113 8))
-		(line (pt 109 12)(pt 113 8))
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
 	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
 )
 (pin
 	(output)
@@ -265,7 +265,7 @@ applicable agreement for further details.
 (symbol
 	(rect 176 328 208 360)
 	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
-	(text "inst" (rect 3 21 20 33)(font "Arial" )(invisible))
+	(text "inst3" (rect 3 21 26 33)(font "Arial" )(invisible))
 	(port
 		(pt 16 0)
 		(output)
@@ -322,23 +322,8 @@ applicable agreement for further details.
 	(pt 432 200)
 )
 (connector
-	(pt 464 152)
-	(pt 400 152)
-	(bus)
-)
-(connector
-	(pt 400 152)
-	(pt 400 144)
-	(bus)
-)
-(connector
 	(pt 464 288)
 	(pt 448 288)
-	(bus)
-)
-(connector
-	(pt 464 168)
-	(pt 408 168)
 	(bus)
 )
 (connector
@@ -404,5 +389,20 @@ applicable agreement for further details.
 (connector
 	(pt 944 224)
 	(pt 992 224)
+	(bus)
+)
+(connector
+	(pt 304 152)
+	(pt 464 152)
+	(bus)
+)
+(connector
+	(pt 312 176)
+	(pt 312 168)
+	(bus)
+)
+(connector
+	(pt 312 168)
+	(pt 464 168)
 	(bus)
 )

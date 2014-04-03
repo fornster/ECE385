@@ -9,7 +9,7 @@ entity IR is
 			ir5 : out std_logic;
 			dest, srcA, srcb : out std_logic_vector(2 downto 0);
 			opCode : out std_logic_vector(3 downto 0);
-			imm5 : out std_logic_vector(15 downto 0));
+			imm5, sext6, sext9, sext11 : out std_logic_vector(15 downto 0));
 end entity;
 
 architecture behavioral of IR is
@@ -29,5 +29,8 @@ begin
 	dest <= internal(11 downto 9);
 	srcA <= internal(8 downto 6);
 	srcb <= internal(2 downto 0);
+	sext6 <= internal(5) & internal(5) & internal(5) & internal(5) & internal(5) & internal(5) & internal(5) & internal(5) & internal(5) & internal(5) & internal(5 downto 0);
+	sext9 <= internal(8) & internal(8) & internal(8) & internal(8) & internal(8) & internal(8) & internal(8) & internal(8 downto 0);
+	sext11 <= internal(10) & internal(10) & internal(10) & internal(10) & internal(10) & internal(10 downto 0);
 	imm5 <= internal(4) & internal(4) & internal(4) & internal(4) & internal(4) & internal(4) & internal(4) & internal(4) & internal(4) & internal(4) & internal(4) & internal(4 downto 0);
 end behavioral;

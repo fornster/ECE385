@@ -1,5 +1,5 @@
 Analysis & Synthesis report for slc3
-Wed Apr 02 22:10:47 2014
+Thu Apr 03 01:34:17 2014
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -45,15 +45,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 02 22:10:47 2014      ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 03 01:34:17 2014      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; slc3                                       ;
 ; Top-level Entity Name              ; datapath                                   ;
 ; Family                             ; Cyclone II                                 ;
-; Total logic elements               ; 519                                        ;
-;     Total combinational functions  ; 359                                        ;
-;     Dedicated logic registers      ; 234                                        ;
-; Total registers                    ; 234                                        ;
+; Total logic elements               ; 588                                        ;
+;     Total combinational functions  ; 412                                        ;
+;     Dedicated logic registers      ; 258                                        ;
+; Total registers                    ; 258                                        ;
 ; Total pins                         ; 87                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -177,6 +177,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; regMux.vhd                       ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9/regMux.vhd       ;         ;
 ; hexDriver.vhd                    ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9/hexDriver.vhd    ;         ;
 ; MAR.vhd                          ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9/MAR.vhd          ;         ;
+; adder.vhd                        ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9/adder.vhd        ;         ;
+; addrAdd.bdf                      ; yes             ; User Block Diagram/Schematic File  ; E:/Documents/ECE385/ECE385/lab9/addrAdd.bdf      ;         ;
+; PCstruct.bdf                     ; yes             ; User Block Diagram/Schematic File  ; E:/Documents/ECE385/ECE385/lab9/PCstruct.bdf     ;         ;
+; regStruct.bdf                    ; yes             ; User Block Diagram/Schematic File  ; E:/Documents/ECE385/ECE385/lab9/regStruct.bdf    ;         ;
+; SR1Mux.vhd                       ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9/SR1Mux.vhd       ;         ;
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------+---------+
 
 
@@ -185,77 +190,88 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 519   ;
+; Estimated Total logic elements              ; 588   ;
 ;                                             ;       ;
-; Total combinational functions               ; 359   ;
+; Total combinational functions               ; 412   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 221   ;
-;     -- 3 input functions                    ; 108   ;
-;     -- <=2 input functions                  ; 30    ;
+;     -- 4 input functions                    ; 267   ;
+;     -- 3 input functions                    ; 117   ;
+;     -- <=2 input functions                  ; 28    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 330   ;
+;     -- normal mode                          ; 383   ;
 ;     -- arithmetic mode                      ; 29    ;
 ;                                             ;       ;
-; Total registers                             ; 234   ;
-;     -- Dedicated logic registers            ; 234   ;
+; Total registers                             ; 258   ;
+;     -- Dedicated logic registers            ; 258   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 87    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 234   ;
-; Total fan-out                               ; 2160  ;
-; Average fan-out                             ; 3.18  ;
+; Maximum fan-out                             ; 258   ;
+; Total fan-out                               ; 2500  ;
+; Average fan-out                             ; 3.30  ;
 +---------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
-; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Library Name ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
-; |datapath                    ; 359 (0)           ; 234 (0)      ; 0           ; 0            ; 0       ; 0         ; 87   ; 0            ; |datapath                         ;              ;
-;    |IR:instruction_register| ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|IR:instruction_register ;              ;
-;    |ISDU:Control|            ; 26 (26)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ISDU:Control            ;              ;
-;    |MAR:inst12|              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MAR:inst12              ;              ;
-;    |Mem2IO:inst2|            ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Mem2IO:inst2            ;              ;
-;    |alu:ALU|                 ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|alu:ALU                 ;              ;
-;    |reg16b:MDR|              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg16b:MDR              ;              ;
-;    |reg16b:PC|               ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg16b:PC               ;              ;
-;    |regFile:inst4|           ; 168 (168)         ; 160 (160)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|regFile:inst4           ;              ;
-;    |tristateBuff:GateMDR|    ; 77 (77)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|tristateBuff:GateMDR    ;              ;
-;    |tristateBuff:inst3|      ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|tristateBuff:inst3      ;              ;
-;    |wordMux2:SR2Mux|         ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|wordMux2:SR2Mux         ;              ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                              ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
+; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
+; |datapath                    ; 412 (0)           ; 258 (0)      ; 0           ; 0            ; 0       ; 0         ; 87   ; 0            ; |datapath                              ;              ;
+;    |IR:instruction_register| ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|IR:instruction_register      ;              ;
+;    |ISDU:Control|            ; 47 (47)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ISDU:Control                 ;              ;
+;    |MAR:inst12|              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MAR:inst12                   ;              ;
+;    |Mem2IO:inst2|            ; 23 (23)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Mem2IO:inst2                 ;              ;
+;    |PCstruct:inst|           ; 16 (0)            ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|PCstruct:inst                ;              ;
+;       |reg16b:PCreg|         ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|PCstruct:inst|reg16b:PCreg   ;              ;
+;    |alu:ALU|                 ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|alu:ALU                      ;              ;
+;    |hexDriver:inst10|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|hexDriver:inst10             ;              ;
+;    |hexDriver:inst11|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|hexDriver:inst11             ;              ;
+;    |hexDriver:inst8|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|hexDriver:inst8              ;              ;
+;    |hexDriver:inst9|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|hexDriver:inst9              ;              ;
+;    |reg16b:MDR|              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|reg16b:MDR                   ;              ;
+;    |regStruct:inst1|         ; 171 (0)           ; 160 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|regStruct:inst1              ;              ;
+;       |regFile:inst|         ; 168 (168)         ; 160 (160)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|regStruct:inst1|regFile:inst ;              ;
+;       |sr1Mux:inst4|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|regStruct:inst1|sr1Mux:inst4 ;              ;
+;    |tristateBuff:GateMDR|    ; 51 (51)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|tristateBuff:GateMDR         ;              ;
+;    |tristateBuff:inst3|      ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|tristateBuff:inst3           ;              ;
+;    |wordMux2:SR2Mux|         ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|wordMux2:SR2Mux              ;              ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |datapath|ISDU:Control|State                                                                                                                                                                                                                                      ;
-+-----------------+------------+------------+------------+------------+------------+------------+-----------+------------+------------+------------+--------------+--------------+-----------------+---------------+---------------+----------------+----------------+--------------+
-; Name            ; State.STR1 ; State.STR0 ; State.LDR1 ; State.LDR0 ; State.JSR0 ; State.JMP0 ; State.BR0 ; State.not0 ; State.and0 ; State.add0 ; State.Decode ; State.LoadIR ; State.LoadMDR_2 ; State.LoadMDR ; State.PCtoMAR ; State.PauseIR2 ; State.PauseIR1 ; State.Halted ;
-+-----------------+------------+------------+------------+------------+------------+------------+-----------+------------+------------+------------+--------------+--------------+-----------------+---------------+---------------+----------------+----------------+--------------+
-; State.Halted    ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 0            ;
-; State.PauseIR1  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 1              ; 1            ;
-; State.PauseIR2  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 1              ; 0              ; 1            ;
-; State.PCtoMAR   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 1             ; 0              ; 0              ; 1            ;
-; State.LoadMDR   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 1             ; 0             ; 0              ; 0              ; 1            ;
-; State.LoadMDR_2 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 1               ; 0             ; 0             ; 0              ; 0              ; 1            ;
-; State.LoadIR    ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 1            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
-; State.Decode    ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 1            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
-; State.add0      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 1          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
-; State.and0      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 1          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
-; State.not0      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 1          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
-; State.BR0       ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
-; State.JMP0      ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
-; State.JSR0      ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
-; State.LDR0      ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
-; State.LDR1      ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
-; State.STR0      ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
-; State.STR1      ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
-+-----------------+------------+------------+------------+------------+------------+------------+-----------+------------+------------+------------+--------------+--------------+-----------------+---------------+---------------+----------------+----------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |datapath|ISDU:Control|State                                                                                                                                                                                                                                                                                          ;
++-----------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+------------+------------+------------+--------------+--------------+-----------------+---------------+---------------+----------------+----------------+--------------+
+; Name            ; State.STR3 ; State.STR2 ; State.STR1 ; State.STR0 ; State.LDR3 ; State.LDR2 ; State.LDR1 ; State.LDR0 ; State.JSR0 ; State.JMP0 ; State.BR0 ; State.not0 ; State.and0 ; State.add0 ; State.Decode ; State.LoadIR ; State.LoadMDR_2 ; State.LoadMDR ; State.PCtoMAR ; State.PauseIR2 ; State.PauseIR1 ; State.Halted ;
++-----------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+------------+------------+------------+--------------+--------------+-----------------+---------------+---------------+----------------+----------------+--------------+
+; State.Halted    ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 0            ;
+; State.PauseIR1  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 1              ; 1            ;
+; State.PauseIR2  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 1              ; 0              ; 1            ;
+; State.PCtoMAR   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 1             ; 0              ; 0              ; 1            ;
+; State.LoadMDR   ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 1             ; 0             ; 0              ; 0              ; 1            ;
+; State.LoadMDR_2 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 1               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.LoadIR    ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 1            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.Decode    ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 1            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.add0      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 1          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.and0      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 1          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.not0      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 1          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.BR0       ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.JMP0      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.JSR0      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.LDR0      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.LDR1      ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.LDR2      ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.LDR3      ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.STR0      ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.STR1      ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.STR2      ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
+; State.STR3      ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0          ; 0          ; 0          ; 0            ; 0            ; 0               ; 0             ; 0             ; 0              ; 0              ; 1            ;
++-----------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+------------+------------+------------+--------------+--------------+-----------------+---------------+---------------+----------------+----------------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -263,39 +279,42 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+-----------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal   ; Free of Timing Hazards ;
 +-----------------------------------------------------+-----------------------+------------------------+
-; ISDU:Control|Next_state.LoadMDR_391                 ; ISDU:Control|WideNor0 ; yes                    ;
-; ISDU:Control|Next_state.LoadMDR_2_383               ; ISDU:Control|WideNor0 ; yes                    ;
-; ISDU:Control|Next_state.PCtoMAR_399                 ; ISDU:Control|WideNor0 ; yes                    ;
-; ISDU:Control|Next_state.Halted_423                  ; ISDU:Control|WideNor0 ; yes                    ;
-; ISDU:Control|Next_state.PauseIR1_415                ; ISDU:Control|WideNor0 ; yes                    ;
-; ISDU:Control|Next_state.LoadIR_375                  ; ISDU:Control|WideNor0 ; yes                    ;
-; ISDU:Control|Next_state.Decode_367                  ; ISDU:Control|WideNor0 ; yes                    ;
-; ISDU:Control|Next_state.add0_359                    ; ISDU:Control|WideNor0 ; yes                    ;
-; ISDU:Control|ALUK[1]                                ; ISDU:Control|WideOr11 ; yes                    ;
-; ISDU:Control|ALUK[0]                                ; ISDU:Control|WideOr11 ; yes                    ;
-; ISDU:Control|Next_state.and0_351                    ; ISDU:Control|WideNor0 ; yes                    ;
-; ISDU:Control|Next_state.not0_343                    ; ISDU:Control|WideNor0 ; yes                    ;
-; Number of user-specified and inferred latches = 12  ;                       ;                        ;
+; ISDU:Control|Next_state.LoadMDR_496                 ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.LoadMDR_2_488               ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.LDR1_416                    ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.LDR2_408                    ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.STR2_376                    ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.STR3_368                    ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.PCtoMAR_504                 ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.LDR0_424                    ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.STR0_392                    ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.and0_456                    ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.BR0_440                     ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.STR1_384                    ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|ALUK[1]                                ; ISDU:Control|WideOr21 ; yes                    ;
+; ISDU:Control|ALUK[0]                                ; ISDU:Control|WideOr21 ; yes                    ;
+; ISDU:Control|Next_state.LoadIR_480                  ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.LDR3_400                    ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.add0_464                    ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.not0_448                    ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.Decode_472                  ; ISDU:Control|WideOr0  ; yes                    ;
+; ISDU:Control|Next_state.Halted_528                  ; ISDU:Control|WideOr0  ; yes                    ;
+; Number of user-specified and inferred latches = 20  ;                       ;                        ;
 +-----------------------------------------------------+-----------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; Mem2IO:inst2|hex_data[0..15]           ; Stuck at GND due to stuck port clock_enable ;
-; ISDU:Control|State.BR0                 ; Lost fanout                                 ;
-; ISDU:Control|State.LDR0                ; Lost fanout                                 ;
-; ISDU:Control|State.STR0                ; Lost fanout                                 ;
-; ISDU:Control|State.PauseIR2            ; Lost fanout                                 ;
-; ISDU:Control|State.JMP0                ; Lost fanout                                 ;
-; ISDU:Control|State.JSR0                ; Lost fanout                                 ;
-; ISDU:Control|State.LDR1                ; Lost fanout                                 ;
-; ISDU:Control|State.STR1                ; Lost fanout                                 ;
-; Total Number of Removed Registers = 24 ;                                             ;
-+----------------------------------------+---------------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; ISDU:Control|State.PauseIR2           ; Lost fanout        ;
+; ISDU:Control|State.JMP0               ; Lost fanout        ;
+; ISDU:Control|State.JSR0               ; Lost fanout        ;
+; ISDU:Control|State.PauseIR1           ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -303,25 +322,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 234   ;
+; Total registers                              ; 258   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 202   ;
+; Number of registers using Asynchronous Clear ; 226   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 192   ;
+; Number of registers using Clock Enable       ; 207   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |datapath|regFile:inst4|SR2out[2] ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |datapath|regFile:inst4|SR1out[2] ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|alu:ALU|Mux11           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |datapath|regStruct:inst1|regFile:inst|SR2out[15] ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |datapath|regStruct:inst1|regFile:inst|SR1out[4]  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|alu:ALU|Mux10                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
 +-------------------------------+
@@ -329,7 +348,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -339,7 +358,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Wed Apr 02 22:10:45 2014
+    Info: Processing started: Thu Apr 03 01:34:15 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off slc3 -c slc3
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file test_memory.vhd
@@ -386,18 +405,34 @@ Info (12021): Found 2 design units, including 1 entities, in source file hexdriv
 Info (12021): Found 2 design units, including 1 entities, in source file mar.vhd
     Info (12022): Found design unit 1: MAR-behavioral
     Info (12023): Found entity 1: MAR
+Info (12021): Found 2 design units, including 1 entities, in source file adder.vhd
+    Info (12022): Found design unit 1: adder-behavioral
+    Info (12023): Found entity 1: adder
+Info (12021): Found 1 design units, including 1 entities, in source file addradd.bdf
+    Info (12023): Found entity 1: addrAdd
+Info (12021): Found 1 design units, including 1 entities, in source file pcstruct.bdf
+    Info (12023): Found entity 1: PCstruct
+Info (12021): Found 1 design units, including 1 entities, in source file regstruct.bdf
+    Info (12023): Found entity 1: regStruct
+Info (12021): Found 2 design units, including 1 entities, in source file sr1mux.vhd
+    Info (12022): Found design unit 1: sr1Mux-behavioral
+    Info (12023): Found entity 1: sr1Mux
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
 Info (12128): Elaborating entity "ISDU" for hierarchy "ISDU:Control"
 Warning (10492): VHDL Process Statement warning at ISDU.vhd(95): signal "ContinueIR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at ISDU.vhd(101): signal "ContinueIR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at ISDU.vhd(76): inferring latch(es) for signal or variable "Next_state", which holds its previous value in one or more paths through the process
-Warning (10492): VHDL Process Statement warning at ISDU.vhd(178): signal "IR_5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ISDU.vhd(183): signal "IR_5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at ISDU.vhd(130): inferring latch(es) for signal or variable "ALUK", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "ALUK[0]" at ISDU.vhd(130)
-Info (10041): Inferred latch for "ALUK[1]" at ISDU.vhd(130)
+Warning (10492): VHDL Process Statement warning at ISDU.vhd(196): signal "IR_5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ISDU.vhd(201): signal "IR_5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ISDU.vhd(148): inferring latch(es) for signal or variable "ALUK", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "ALUK[0]" at ISDU.vhd(148)
+Info (10041): Inferred latch for "ALUK[1]" at ISDU.vhd(148)
+Info (10041): Inferred latch for "Next_state.STR3" at ISDU.vhd(76)
+Info (10041): Inferred latch for "Next_state.STR2" at ISDU.vhd(76)
 Info (10041): Inferred latch for "Next_state.STR1" at ISDU.vhd(76)
 Info (10041): Inferred latch for "Next_state.STR0" at ISDU.vhd(76)
+Info (10041): Inferred latch for "Next_state.LDR3" at ISDU.vhd(76)
+Info (10041): Inferred latch for "Next_state.LDR2" at ISDU.vhd(76)
 Info (10041): Inferred latch for "Next_state.LDR1" at ISDU.vhd(76)
 Info (10041): Inferred latch for "Next_state.LDR0" at ISDU.vhd(76)
 Info (10041): Inferred latch for "Next_state.JSR0" at ISDU.vhd(76)
@@ -424,11 +459,16 @@ Warning (10492): VHDL Process Statement warning at alu.vhd(20): signal "A" is re
 Warning (10492): VHDL Process Statement warning at alu.vhd(20): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at alu.vhd(22): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at alu.vhd(24): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "regFile" for hierarchy "regFile:inst4"
-Info (12128): Elaborating entity "regMux" for hierarchy "regMux:inst1"
+Info (12128): Elaborating entity "regStruct" for hierarchy "regStruct:inst1"
+Info (12128): Elaborating entity "regFile" for hierarchy "regStruct:inst1|regFile:inst"
+Info (12128): Elaborating entity "regMux" for hierarchy "regStruct:inst1|regMux:inst3"
+Info (12128): Elaborating entity "sr1Mux" for hierarchy "regStruct:inst1|sr1Mux:inst4"
 Info (12128): Elaborating entity "wordMux2" for hierarchy "wordMux2:SR2Mux"
-Info (12128): Elaborating entity "wordMux4" for hierarchy "wordMux4:PCMux"
-Info (12128): Elaborating entity "plus2" for hierarchy "plus2:inst"
+Info (12128): Elaborating entity "addrAdd" for hierarchy "addrAdd:MuxAdd"
+Info (12128): Elaborating entity "adder" for hierarchy "addrAdd:MuxAdd|adder:inst2"
+Info (12128): Elaborating entity "wordMux4" for hierarchy "addrAdd:MuxAdd|wordMux4:inst"
+Info (12128): Elaborating entity "PCstruct" for hierarchy "PCstruct:inst"
+Info (12128): Elaborating entity "plus2" for hierarchy "PCstruct:inst|plus2:inst1"
 Info (12128): Elaborating entity "Mem2IO" for hierarchy "Mem2IO:inst2"
 Info (12128): Elaborating entity "MAR" for hierarchy "MAR:inst12"
 Info (12128): Elaborating entity "hexDriver" for hierarchy "hexDriver:inst8"
@@ -450,111 +490,47 @@ Warning (13027): Removed fan-outs from the following always-disabled I/O buffers
     Warning (13028): Removed fan-out from the always-disabled I/O buffer "tristateBuff:Margate|dataOut[1]" to the node "Mem2IO:inst2|Data_Mem[1]"
     Warning (13028): Removed fan-out from the always-disabled I/O buffer "tristateBuff:Margate|dataOut[0]" to the node "Mem2IO:inst2|Data_Mem[0]"
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[15]" to the node "reg16b:MDR|\regOp:ram[15]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[14]" to the node "reg16b:MDR|\regOp:ram[14]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[13]" to the node "reg16b:MDR|\regOp:ram[13]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[12]" to the node "reg16b:MDR|\regOp:ram[12]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[11]" to the node "reg16b:MDR|\regOp:ram[11]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[10]" to the node "reg16b:MDR|\regOp:ram[10]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[9]" to the node "reg16b:MDR|\regOp:ram[9]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[8]" to the node "reg16b:MDR|\regOp:ram[8]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[7]" to the node "reg16b:MDR|\regOp:ram[7]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[6]" to the node "reg16b:MDR|\regOp:ram[6]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[5]" to the node "reg16b:MDR|\regOp:ram[5]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[4]" to the node "reg16b:MDR|\regOp:ram[4]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[3]" to the node "reg16b:MDR|\regOp:ram[3]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[2]" to the node "reg16b:MDR|\regOp:ram[2]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[1]" to the node "reg16b:MDR|\regOp:ram[1]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[0]" to the node "reg16b:MDR|\regOp:ram[0]" into an OR gate
-Warning (13012): Latch ISDU:Control|Next_state.LoadMDR_391 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ISDU:Control|State.PCtoMAR
-Warning (13012): Latch ISDU:Control|Next_state.LoadMDR_2_383 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ISDU:Control|State.LoadMDR
-Warning (13012): Latch ISDU:Control|Next_state.PCtoMAR_399 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ISDU:Control|State.add0
-Warning (13012): Latch ISDU:Control|Next_state.Halted_423 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ISDU:Control|State.PauseIR1
-Warning (13012): Latch ISDU:Control|Next_state.PauseIR1_415 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ISDU:Control|State.PauseIR1
-Warning (13012): Latch ISDU:Control|Next_state.LoadIR_375 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ISDU:Control|State.LoadMDR_2
-Warning (13012): Latch ISDU:Control|Next_state.Decode_367 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ISDU:Control|State.LoadIR
-Warning (13012): Latch ISDU:Control|Next_state.add0_359 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ISDU:Control|State.Decode
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[15]" to the node "MAR:inst12|\regOp:ram[15]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[14]" to the node "MAR:inst12|\regOp:ram[14]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[13]" to the node "MAR:inst12|\regOp:ram[13]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[12]" to the node "MAR:inst12|\regOp:ram[12]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[11]" to the node "MAR:inst12|\regOp:ram[11]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[10]" to the node "MAR:inst12|\regOp:ram[10]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[9]" to the node "MAR:inst12|\regOp:ram[9]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[8]" to the node "MAR:inst12|\regOp:ram[8]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[7]" to the node "MAR:inst12|\regOp:ram[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[6]" to the node "MAR:inst12|\regOp:ram[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[5]" to the node "MAR:inst12|\regOp:ram[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[4]" to the node "MAR:inst12|\regOp:ram[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[3]" to the node "MAR:inst12|\regOp:ram[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[2]" to the node "MAR:inst12|\regOp:ram[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[1]" to the node "MAR:inst12|\regOp:ram[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "tristateBuff:GateMDR|dataOut[0]" to the node "MAR:inst12|\regOp:ram[0]" into an OR gate
 Warning (13012): Latch ISDU:Control|ALUK[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ISDU:Control|State.not0
 Warning (13012): Latch ISDU:Control|ALUK[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ISDU:Control|State.and0
-Warning (13012): Latch ISDU:Control|Next_state.and0_351 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ISDU:Control|State.Decode
-Warning (13012): Latch ISDU:Control|Next_state.not0_343 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal ISDU:Control|State.Decode
-Warning (13008): TRI or OPNDRN buffers permanently disabled
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[15]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[14]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[13]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[12]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[11]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[10]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[9]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[8]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[7]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[6]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[5]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[4]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[3]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[2]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[1]~synth"
-    Warning (13010): Node "Mem2IO:inst2|Data_Mem[0]~synth"
+Warning (13012): Latch ISDU:Control|Next_state.Halted_528 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ISDU:Control|State.and0
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "CE" is stuck at GND
     Warning (13410): Pin "UB" is stuck at GND
     Warning (13410): Pin "LB" is stuck at GND
-    Warning (13410): Pin "WE" is stuck at VCC
     Warning (13410): Pin "ADDR[17]" is stuck at GND
     Warning (13410): Pin "ADDR[16]" is stuck at GND
-    Warning (13410): Pin "Hex0[6]" is stuck at VCC
-    Warning (13410): Pin "Hex0[5]" is stuck at GND
-    Warning (13410): Pin "Hex0[4]" is stuck at GND
-    Warning (13410): Pin "Hex0[3]" is stuck at GND
-    Warning (13410): Pin "Hex0[2]" is stuck at GND
-    Warning (13410): Pin "Hex0[1]" is stuck at GND
-    Warning (13410): Pin "Hex0[0]" is stuck at GND
-    Warning (13410): Pin "Hex1[6]" is stuck at VCC
-    Warning (13410): Pin "Hex1[5]" is stuck at GND
-    Warning (13410): Pin "Hex1[4]" is stuck at GND
-    Warning (13410): Pin "Hex1[3]" is stuck at GND
-    Warning (13410): Pin "Hex1[2]" is stuck at GND
-    Warning (13410): Pin "Hex1[1]" is stuck at GND
-    Warning (13410): Pin "Hex1[0]" is stuck at GND
-    Warning (13410): Pin "Hex2[6]" is stuck at VCC
-    Warning (13410): Pin "Hex2[5]" is stuck at GND
-    Warning (13410): Pin "Hex2[4]" is stuck at GND
-    Warning (13410): Pin "Hex2[3]" is stuck at GND
-    Warning (13410): Pin "Hex2[2]" is stuck at GND
-    Warning (13410): Pin "Hex2[1]" is stuck at GND
-    Warning (13410): Pin "Hex2[0]" is stuck at GND
-    Warning (13410): Pin "Hex3[6]" is stuck at VCC
-    Warning (13410): Pin "Hex3[5]" is stuck at GND
-    Warning (13410): Pin "Hex3[4]" is stuck at GND
-    Warning (13410): Pin "Hex3[3]" is stuck at GND
-    Warning (13410): Pin "Hex3[2]" is stuck at GND
-    Warning (13410): Pin "Hex3[1]" is stuck at GND
-    Warning (13410): Pin "Hex3[0]" is stuck at GND
-Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "Continue"
-Info (21057): Implemented 631 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 708 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 51 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 544 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 125 warnings
-    Info: Peak virtual memory: 483 megabytes
-    Info: Processing ended: Wed Apr 02 22:10:47 2014
+    Info (21061): Implemented 621 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 61 warnings
+    Info: Peak virtual memory: 500 megabytes
+    Info: Processing ended: Thu Apr 03 01:34:17 2014
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

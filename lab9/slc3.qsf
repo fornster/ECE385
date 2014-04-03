@@ -155,6 +155,8 @@ set_location_assignment PIN_AF9 -to UB
 set_location_assignment PIN_AE10 -to WE
 set_location_assignment PIN_AC11 -to CE
 set_global_assignment -name VHDL_FILE adder.vhd
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name BDF_FILE addrAdd.bdf
 set_global_assignment -name BDF_FILE PCstruct.bdf
+set_global_assignment -name BDF_FILE regStruct.bdf
+set_global_assignment -name VHDL_FILE SR1Mux.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
