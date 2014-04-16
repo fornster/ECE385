@@ -1,0 +1,210 @@
+Analysis & Synthesis report for 2048
+Wed Apr 16 14:33:43 2014
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Wed Apr 16 14:33:43 2014          ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name                      ; 2048                                       ;
+; Top-level Entity Name              ; 2048                                       ;
+; Family                             ; Cyclone II                                 ;
+; Total logic elements               ; N/A until Partition Merge                  ;
+;     Total combinational functions  ; N/A until Partition Merge                  ;
+;     Dedicated logic registers      ; N/A until Partition Merge                  ;
+; Total registers                    ; N/A until Partition Merge                  ;
+; Total pins                         ; N/A until Partition Merge                  ;
+; Total virtual pins                 ; N/A until Partition Merge                  ;
+; Total memory bits                  ; N/A until Partition Merge                  ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
+; Total PLLs                         ; N/A until Partition Merge                  ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; 2048               ; 2048               ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Wed Apr 16 14:33:42 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 2048 -c 2048
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/keyboard.bdf
+    Info (12023): Found entity 1: keyboard
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/keymap.vhd
+    Info (12022): Found design unit 1: keyMap-Behavioral
+    Info (12023): Found entity 1: keyMap
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/keycapt.vhd
+    Info (12022): Found design unit 1: keyCapture-Behavioral
+    Info (12023): Found entity 1: keyCapture
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/vga_controller.vhd
+    Info (12022): Found design unit 1: vga_controller-Behavioral
+    Info (12023): Found entity 1: vga_controller
+Info (12021): Found 1 design units, including 1 entities, in source file 2048.bdf
+    Info (12023): Found entity 1: 2048
+Error (10995): VHDL error at gameBoard.vhd(16): block comments are not supported in VHDL_1993 File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 16
+Error (10500): VHDL syntax error at gameBoard.vhd(16) near text "board_state";  expecting "begin", or a declaration statement File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 16
+Error (10500): VHDL syntax error at gameBoard.vhd(30) near text ";";  expecting "end", or "(", or an identifier, or a sequential statement File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 30
+Error (10500): VHDL syntax error at gameBoard.vhd(35) near text "if";  expecting "end", or "(", or an identifier ("if" is a reserved keyword), or a concurrent statement File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 35
+Error (10500): VHDL syntax error at gameBoard.vhd(35) near text "then";  expecting "<=" File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 35
+Error (10500): VHDL syntax error at gameBoard.vhd(37) near text "=";  expecting "(", or "'", or "." File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 37
+Error (10500): VHDL syntax error at gameBoard.vhd(38) near text "loop";  expecting ";", or an identifier ("loop" is a reserved keyword), or "architecture" File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 38
+Error (10500): VHDL syntax error at gameBoard.vhd(43) near text "if";  expecting ";", or an identifier ("if" is a reserved keyword), or "architecture" File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 43
+Info (12021): Found 0 design units, including 0 entities, in source file gameboard.vhd
+Error (10430): VHDL Primary Unit Declaration error at gameBoardH.vhd(6): primary unit "gameBoard" already exists in library "work" File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 6
+Error (10784): HDL error at gameBoard.vhd(7): see declaration for object "gameBoard" File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 7
+Error (10995): VHDL error at gameBoardH.vhd(24): block comments are not supported in VHDL_1993 File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 24
+Error (10500): VHDL syntax error at gameBoardH.vhd(25) near text ":";  expecting "&", or "+", or "-", or "downto", or "to" File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 25
+Error (10500): VHDL syntax error at gameBoardH.vhd(26) near text ":";  expecting "&", or "+", or "-", or "downto", or "to" File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 26
+Error (10500): VHDL syntax error at gameBoardH.vhd(27) near text "=";  expecting "(", or "'", or "." File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 27
+Error (10500): VHDL syntax error at gameBoardH.vhd(28) near text "loop";  expecting "if" File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 28
+Error (10500): VHDL syntax error at gameBoardH.vhd(32) near text ":";  expecting "&", or "+", or "-", or "downto", or "to" File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 32
+Error (10500): VHDL syntax error at gameBoardH.vhd(33) near text "range";  expecting "(", or an identifier ("range" is a reserved keyword), or  unary operator File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 33
+Info (12021): Found 0 design units, including 0 entities, in source file gameboardh.vhd
+Error (10500): VHDL syntax error at newTile.vhd(11) near text "architecture";  expecting "end", or "begin", or a declaration statement File: E:/Documents/ECE385/ECE385/2048/newTile.vhd Line: 11
+Error (10396): VHDL syntax error at newTile.vhd(21): name used in construct must match previously specified name "newTile" File: E:/Documents/ECE385/ECE385/2048/newTile.vhd Line: 21
+Error (10523): Ignored construct newTile at newTile.vhd(6) due to previous errors File: E:/Documents/ECE385/ECE385/2048/newTile.vhd Line: 6
+Info (12021): Found 0 design units, including 0 entities, in source file newtile.vhd
+Error (10500): VHDL syntax error at keyInterface.vhd(29) near text ")";  expecting "(", or an identifier, or  unary operator File: E:/Documents/ECE385/ECE385/2048/keyInterface.vhd Line: 29
+Error (10500): VHDL syntax error at keyInterface.vhd(32) near text ")";  expecting "(", or an identifier, or  unary operator File: E:/Documents/ECE385/ECE385/2048/keyInterface.vhd Line: 32
+Error (10500): VHDL syntax error at keyInterface.vhd(35) near text ")";  expecting "(", or an identifier, or  unary operator File: E:/Documents/ECE385/ECE385/2048/keyInterface.vhd Line: 35
+Error (10500): VHDL syntax error at keyInterface.vhd(38) near text ")";  expecting "(", or an identifier, or  unary operator File: E:/Documents/ECE385/ECE385/2048/keyInterface.vhd Line: 38
+Error (10500): VHDL syntax error at keyInterface.vhd(41) near text ")";  expecting "(", or an identifier, or  unary operator File: E:/Documents/ECE385/ECE385/2048/keyInterface.vhd Line: 41
+Error (10500): VHDL syntax error at keyInterface.vhd(48) near text "behavioral";  expecting "if" File: E:/Documents/ECE385/ECE385/2048/keyInterface.vhd Line: 48
+Info (12021): Found 0 design units, including 0 entities, in source file keyinterface.vhd
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 26 errors, 1 warning
+    Error: Peak virtual memory: 471 megabytes
+    Error: Processing ended: Wed Apr 16 14:33:43 2014
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:01
+
+

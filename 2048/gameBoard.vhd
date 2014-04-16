@@ -13,7 +13,7 @@ end entity;
 
 architecture behavioral of gameBoard is
 	
-	board_state : process(reset) is
+	/*board_state : process(reset) is
 	type board is array(15 downto 0) of std_logic_vector(10 downto 0);
 	variable currBoard : board;
 	variable freeTiles : std_logic_vector(15 downto 0);
@@ -27,12 +27,13 @@ architecture behavioral of gameBoard is
 	end procedure newTile;
 	
 	procedure getRandom is
-		random := 
+		begin;
+		--random := 
 	end procedure getRandom;
 	
 	begin
 		if(reset = '1') then
-			for index in integer range 0 to 15:
+			for index in integer range 0 to 15 loop:
 				currBoard(index) = "00000000000";
 			end loop;
 			numFree := 16;
@@ -40,5 +41,5 @@ architecture behavioral of gameBoard is
 			newTile;
 			newTile;
 		end if;
-	end process;
+	end process;*/
 end behavioral;

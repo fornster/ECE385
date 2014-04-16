@@ -9,7 +9,7 @@ entity gameBoard is
 		  tileLoc : in std_logic_vector(15 downto 0); --location of the new tile
 		  tileMove : in std_logic_vector(1 downto 0); --direction to move current tiles
 		  move : in std_logic;
-		  needTile : out
+		  needTile : out std_logic
 		  );
 end entity;
 
@@ -21,7 +21,7 @@ begin
 	type board is array(row, row) of std_logic_vector(10 downto 0);
 	variable gb : board; 
 	begin
-		if (reset = '1') then
+		/*if (reset = '1') then
 			for index in row:
 				for jndex in row:
 					gb(index, jndex) = "00000000000";
@@ -30,5 +30,7 @@ begin
 		else if (move = '1') then
 			if(tileMove = '0') then --down
 				for index in row: --needs work to ensure go from bottom up
-					for jndex in range 3 to 1:
+					for jndex in range 3 to 1:*/
+	end process;
+end behavioral;
 						
