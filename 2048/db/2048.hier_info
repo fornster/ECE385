@@ -1,0 +1,340 @@
+|2048
+newMove <= keyboard:inst.newMove
+psData => keyboard:inst.psData
+ps2clk => keyboard:inst.ps2clk
+clk => keyboard:inst.Clk
+reset => inst2.IN0
+moveAck => inst5.IN0
+dir[0] <= keyboard:inst.moveDir[0]
+dir[1] <= keyboard:inst.moveDir[1]
+keyPressH[0] <= hexDriver:inst3.dataOut[0]
+keyPressH[1] <= hexDriver:inst3.dataOut[1]
+keyPressH[2] <= hexDriver:inst3.dataOut[2]
+keyPressH[3] <= hexDriver:inst3.dataOut[3]
+keyPressH[4] <= hexDriver:inst3.dataOut[4]
+keyPressH[5] <= hexDriver:inst3.dataOut[5]
+keyPressH[6] <= hexDriver:inst3.dataOut[6]
+keyPressL[0] <= hexDriver:inst4.dataOut[0]
+keyPressL[1] <= hexDriver:inst4.dataOut[1]
+keyPressL[2] <= hexDriver:inst4.dataOut[2]
+keyPressL[3] <= hexDriver:inst4.dataOut[3]
+keyPressL[4] <= hexDriver:inst4.dataOut[4]
+keyPressL[5] <= hexDriver:inst4.dataOut[5]
+keyPressL[6] <= hexDriver:inst4.dataOut[6]
+
+
+|2048|keyboard:inst
+newMove <= keyInterface:inst1.newMove
+Clk => clkDiv:inst.clk
+Reset => clkDiv:inst.reset
+Reset => keyMap:inst3.reset
+Reset => psclk:inst2.reset
+Reset => keyCapture:ins3t.reset
+psData => keyCapture:ins3t.psdata
+ps2clk => psclk:inst2.ps2clk
+MoveAck => keyInterface:inst1.MoveAck
+keyReset <= keyInterface:inst1.keyReset
+KeyData[0] <= keyMap:inst3.dataOut[0]
+KeyData[1] <= keyMap:inst3.dataOut[1]
+KeyData[2] <= keyMap:inst3.dataOut[2]
+KeyData[3] <= keyMap:inst3.dataOut[3]
+KeyData[4] <= keyMap:inst3.dataOut[4]
+KeyData[5] <= keyMap:inst3.dataOut[5]
+KeyData[6] <= keyMap:inst3.dataOut[6]
+KeyData[7] <= keyMap:inst3.dataOut[7]
+moveDir[0] <= keyInterface:inst1.moveDir[0]
+moveDir[1] <= keyInterface:inst1.moveDir[1]
+
+
+|2048|keyboard:inst|keyInterface:inst1
+newKey => handshake.IN1
+MoveAck => handshake.IN1
+keyCode[0] => Equal0.IN15
+keyCode[0] => Equal1.IN15
+keyCode[0] => Equal2.IN15
+keyCode[0] => Equal3.IN15
+keyCode[0] => Equal4.IN15
+keyCode[1] => Equal0.IN14
+keyCode[1] => Equal1.IN14
+keyCode[1] => Equal2.IN14
+keyCode[1] => Equal3.IN14
+keyCode[1] => Equal4.IN14
+keyCode[2] => Equal0.IN13
+keyCode[2] => Equal1.IN13
+keyCode[2] => Equal2.IN13
+keyCode[2] => Equal3.IN13
+keyCode[2] => Equal4.IN13
+keyCode[3] => Equal0.IN12
+keyCode[3] => Equal1.IN12
+keyCode[3] => Equal2.IN12
+keyCode[3] => Equal3.IN12
+keyCode[3] => Equal4.IN12
+keyCode[4] => Equal0.IN11
+keyCode[4] => Equal1.IN11
+keyCode[4] => Equal2.IN11
+keyCode[4] => Equal3.IN11
+keyCode[4] => Equal4.IN11
+keyCode[5] => Equal0.IN10
+keyCode[5] => Equal1.IN10
+keyCode[5] => Equal2.IN10
+keyCode[5] => Equal3.IN10
+keyCode[5] => Equal4.IN10
+keyCode[6] => Equal0.IN9
+keyCode[6] => Equal1.IN9
+keyCode[6] => Equal2.IN9
+keyCode[6] => Equal3.IN9
+keyCode[6] => Equal4.IN9
+keyCode[7] => Equal0.IN8
+keyCode[7] => Equal1.IN8
+keyCode[7] => Equal2.IN8
+keyCode[7] => Equal3.IN8
+keyCode[7] => Equal4.IN8
+keyAck <= \handshake:ack.DB_MAX_OUTPUT_PORT_TYPE
+newMove <= \handshake:move.DB_MAX_OUTPUT_PORT_TYPE
+keyReset <= reset.DB_MAX_OUTPUT_PORT_TYPE
+moveDir[0] <= \handshake:dir[0].DB_MAX_OUTPUT_PORT_TYPE
+moveDir[1] <= \handshake:dir[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|2048|keyboard:inst|keyMap:inst3
+clk => keyAckout~reg0.CLK
+clk => key.CLK
+clk => state~1.DATAIN
+reset => state~3.DATAIN
+reset => key.ENA
+reset => keyAckout~reg0.ENA
+keyAck => Selector9.IN4
+keyPress => control_reg.IN1
+keyPress => keyAckout.OUTPUTSELECT
+keyPress => key.OUTPUTSELECT
+dataIn[0] => Equal0.IN15
+dataIn[0] => Equal1.IN15
+dataIn[0] => Equal2.IN15
+dataIn[0] => Equal3.IN15
+dataIn[0] => Equal4.IN15
+dataIn[1] => Equal0.IN14
+dataIn[1] => Equal1.IN14
+dataIn[1] => Equal2.IN14
+dataIn[1] => Equal3.IN14
+dataIn[1] => Equal4.IN14
+dataIn[2] => Equal0.IN13
+dataIn[2] => Equal1.IN13
+dataIn[2] => Equal2.IN13
+dataIn[2] => Equal3.IN13
+dataIn[2] => Equal4.IN13
+dataIn[3] => Equal0.IN12
+dataIn[3] => Equal1.IN12
+dataIn[3] => Equal2.IN12
+dataIn[3] => Equal3.IN12
+dataIn[3] => Equal4.IN12
+dataIn[4] => Equal0.IN11
+dataIn[4] => Equal1.IN11
+dataIn[4] => Equal2.IN11
+dataIn[4] => Equal3.IN11
+dataIn[4] => Equal4.IN11
+dataIn[5] => Equal0.IN10
+dataIn[5] => Equal1.IN10
+dataIn[5] => Equal2.IN10
+dataIn[5] => Equal3.IN10
+dataIn[5] => Equal4.IN10
+dataIn[6] => Equal0.IN9
+dataIn[6] => Equal1.IN9
+dataIn[6] => Equal2.IN9
+dataIn[6] => Equal3.IN9
+dataIn[6] => Equal4.IN9
+dataIn[7] => Equal0.IN8
+dataIn[7] => Equal1.IN8
+dataIn[7] => Equal2.IN8
+dataIn[7] => Equal3.IN8
+dataIn[7] => Equal4.IN8
+dataOut[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= data.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= data.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dataOut[5].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= <GND>
+dataOut[7] <= <GND>
+keyAckout <= keyAckout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+newKey <= Selector9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|2048|keyboard:inst|clkDiv:inst
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => count[4].CLK
+clk => count[5].CLK
+clk => count[6].CLK
+clk => count[7].CLK
+clk => temp.CLK
+reset => count[0].ACLR
+reset => count[1].ACLR
+reset => count[2].ACLR
+reset => count[3].ACLR
+reset => count[4].ACLR
+reset => count[5].ACLR
+reset => count[6].ACLR
+reset => count[7].ACLR
+reset => temp.ACLR
+clk_out <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|2048|keyboard:inst|keyCapture:ins3t
+psdata => dataIn[10].DATAIN
+clk => keyRed.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => keyData[0]~reg0.CLK
+clk => keyData[1]~reg0.CLK
+clk => keyData[2]~reg0.CLK
+clk => keyData[3]~reg0.CLK
+clk => keyData[4]~reg0.CLK
+clk => keyData[5]~reg0.CLK
+clk => keyData[6]~reg0.CLK
+clk => keyData[7]~reg0.CLK
+clk => dataIn[2].CLK
+clk => dataIn[3].CLK
+clk => dataIn[4].CLK
+clk => dataIn[5].CLK
+clk => dataIn[6].CLK
+clk => dataIn[7].CLK
+clk => dataIn[8].CLK
+clk => dataIn[9].CLK
+clk => dataIn[10].CLK
+reset => dataIn[2].ACLR
+reset => dataIn[3].ACLR
+reset => dataIn[4].ACLR
+reset => dataIn[5].ACLR
+reset => dataIn[6].ACLR
+reset => dataIn[7].ACLR
+reset => dataIn[8].ACLR
+reset => dataIn[9].ACLR
+reset => dataIn[10].ACLR
+reset => count[0].ENA
+reset => keyData[7]~reg0.ENA
+reset => keyData[6]~reg0.ENA
+reset => keyData[5]~reg0.ENA
+reset => keyData[4]~reg0.ENA
+reset => keyData[3]~reg0.ENA
+reset => keyData[2]~reg0.ENA
+reset => keyData[1]~reg0.ENA
+reset => keyData[0]~reg0.ENA
+reset => count[3].ENA
+reset => count[2].ENA
+reset => count[1].ENA
+reset => keyRed.ENA
+keyAck => keyReady.IN1
+keyReady <= keyReady$latch.DB_MAX_OUTPUT_PORT_TYPE
+keyData[0] <= keyData[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyData[1] <= keyData[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyData[2] <= keyData[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyData[3] <= keyData[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyData[4] <= keyData[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyData[5] <= keyData[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyData[6] <= keyData[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+keyData[7] <= keyData[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|2048|keyboard:inst|psclk:inst2
+ps2clk => Dreg:reg1.D
+clk => Dreg:reg1.clk
+clk => Dreg:reg2.clk
+reset => Dreg:reg1.reset
+reset => Dreg:reg2.reset
+fall_edge <= fall_edge.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|2048|keyboard:inst|psclk:inst2|Dreg:reg1
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|2048|keyboard:inst|psclk:inst2|Dreg:reg2
+D => Q~reg0.DATAIN
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|2048|hexDriver:inst3
+dataIn[0] => Mux0.IN19
+dataIn[0] => Mux1.IN19
+dataIn[0] => Mux2.IN19
+dataIn[0] => Mux3.IN19
+dataIn[0] => Mux4.IN19
+dataIn[0] => Mux5.IN19
+dataIn[0] => Mux6.IN19
+dataIn[1] => Mux0.IN18
+dataIn[1] => Mux1.IN18
+dataIn[1] => Mux2.IN18
+dataIn[1] => Mux3.IN18
+dataIn[1] => Mux4.IN18
+dataIn[1] => Mux5.IN18
+dataIn[1] => Mux6.IN18
+dataIn[2] => Mux0.IN17
+dataIn[2] => Mux1.IN17
+dataIn[2] => Mux2.IN17
+dataIn[2] => Mux3.IN17
+dataIn[2] => Mux4.IN17
+dataIn[2] => Mux5.IN17
+dataIn[2] => Mux6.IN17
+dataIn[3] => Mux0.IN16
+dataIn[3] => Mux1.IN16
+dataIn[3] => Mux2.IN16
+dataIn[3] => Mux3.IN16
+dataIn[3] => Mux4.IN16
+dataIn[3] => Mux5.IN16
+dataIn[3] => Mux6.IN16
+dataOut[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|2048|hexDriver:inst4
+dataIn[0] => Mux0.IN19
+dataIn[0] => Mux1.IN19
+dataIn[0] => Mux2.IN19
+dataIn[0] => Mux3.IN19
+dataIn[0] => Mux4.IN19
+dataIn[0] => Mux5.IN19
+dataIn[0] => Mux6.IN19
+dataIn[1] => Mux0.IN18
+dataIn[1] => Mux1.IN18
+dataIn[1] => Mux2.IN18
+dataIn[1] => Mux3.IN18
+dataIn[1] => Mux4.IN18
+dataIn[1] => Mux5.IN18
+dataIn[1] => Mux6.IN18
+dataIn[2] => Mux0.IN17
+dataIn[2] => Mux1.IN17
+dataIn[2] => Mux2.IN17
+dataIn[2] => Mux3.IN17
+dataIn[2] => Mux4.IN17
+dataIn[2] => Mux5.IN17
+dataIn[2] => Mux6.IN17
+dataIn[3] => Mux0.IN16
+dataIn[3] => Mux1.IN16
+dataIn[3] => Mux2.IN16
+dataIn[3] => Mux3.IN16
+dataIn[3] => Mux4.IN16
+dataIn[3] => Mux5.IN16
+dataIn[3] => Mux6.IN16
+dataOut[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

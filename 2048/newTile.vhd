@@ -7,8 +7,8 @@ entity newTile is
 	port(openTiles : in std_logic_vector(15 downto 0);
 			randomIn : in std_logic_vector(7 downto 0);
 			tileLoc : out std_logic_vector(15 downto 0));
-			
-architecture behavioral of newTiles is
+end entity;			
+architecture behavioral of newTile is
 
 begin
 	

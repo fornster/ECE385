@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 2048
-Wed Apr 16 14:33:43 2014
+Wed Apr 16 16:26:40 2014
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -10,7 +10,15 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |2048|keyboard:inst|keyMap:inst3|state
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +44,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Apr 16 14:33:43 2014          ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 16 16:26:40 2014      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; 2048                                       ;
 ; Top-level Entity Name              ; 2048                                       ;
 ; Family                             ; Cyclone II                                 ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 88                                         ;
+;     Total combinational functions  ; 69                                         ;
+;     Dedicated logic registers      ; 43                                         ;
+; Total registers                    ; 43                                         ;
+; Total pins                         ; 22                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -149,15 +157,161 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                             ;
++---------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path            ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                        ; Library ;
++---------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
+; ../lab9_vga_vhdl_Spring2014/dreg.vhd        ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9_vga_vhdl_Spring2014/dreg.vhd        ;         ;
+; ../lab9_vga_vhdl_Spring2014/psclkSample.vhd ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9_vga_vhdl_Spring2014/psclkSample.vhd ;         ;
+; ../lab9_vga_vhdl_Spring2014/clkDiv.vhd      ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9_vga_vhdl_Spring2014/clkDiv.vhd      ;         ;
+; ../lab9/hexDriver.vhd                       ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9/hexDriver.vhd                       ;         ;
+; ../lab9_vga_vhdl_Spring2014/keyboard.bdf    ; yes             ; User Block Diagram/Schematic File  ; E:/Documents/ECE385/ECE385/lab9_vga_vhdl_Spring2014/keyboard.bdf    ;         ;
+; ../lab9_vga_vhdl_Spring2014/keymap.vhd      ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9_vga_vhdl_Spring2014/keymap.vhd      ;         ;
+; ../lab9_vga_vhdl_Spring2014/keyCapt.vhd     ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9_vga_vhdl_Spring2014/keyCapt.vhd     ;         ;
+; 2048.bdf                                    ; yes             ; User Block Diagram/Schematic File  ; E:/Documents/ECE385/ECE385/2048/2048.bdf                            ;         ;
+; keyInterface.vhd                            ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/2048/keyInterface.vhd                    ;         ;
++---------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 88    ;
+;                                             ;       ;
+; Total combinational functions               ; 69    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 37    ;
+;     -- 3 input functions                    ; 15    ;
+;     -- <=2 input functions                  ; 17    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 62    ;
+;     -- arithmetic mode                      ; 7     ;
+;                                             ;       ;
+; Total registers                             ; 43    ;
+;     -- Dedicated logic registers            ; 43    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 22    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; reset ;
+; Maximum fan-out                             ; 36    ;
+; Total fan-out                               ; 379   ;
+; Average fan-out                             ; 2.83  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                               ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
+; |2048                      ; 69 (0)            ; 43 (0)       ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |2048                                     ;              ;
+;    |hexDriver:inst3|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|hexDriver:inst3                     ;              ;
+;    |hexDriver:inst4|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|hexDriver:inst4                     ;              ;
+;    |keyboard:inst|         ; 63 (0)            ; 43 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst                       ;              ;
+;       |clkDiv:inst|        ; 11 (11)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|clkDiv:inst           ;              ;
+;       |keyCapture:ins3t|   ; 8 (8)             ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|keyCapture:ins3t      ;              ;
+;       |keyInterface:inst1| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|keyInterface:inst1    ;              ;
+;       |keyMap:inst3|       ; 36 (36)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|keyMap:inst3          ;              ;
+;       |psclk:inst2|        ; 1 (1)             ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|psclk:inst2           ;              ;
+;          |Dreg:reg1|       ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|psclk:inst2|Dreg:reg1 ;              ;
+;          |Dreg:reg2|       ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|psclk:inst2|Dreg:reg2 ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------+
+; State Machine - |2048|keyboard:inst|keyMap:inst3|state                                                              ;
++------------+------------+------------+------------+------------+---------+---------+---------+---------+------------+
+; Name       ; state.dEnd ; state.sEnd ; state.aEnd ; state.wEnd ; state.d ; state.s ; state.a ; state.w ; state.idle ;
++------------+------------+------------+------------+------------+---------+---------+---------+---------+------------+
+; state.idle ; 0          ; 0          ; 0          ; 0          ; 0       ; 0       ; 0       ; 0       ; 0          ;
+; state.w    ; 0          ; 0          ; 0          ; 0          ; 0       ; 0       ; 0       ; 1       ; 1          ;
+; state.a    ; 0          ; 0          ; 0          ; 0          ; 0       ; 0       ; 1       ; 0       ; 1          ;
+; state.s    ; 0          ; 0          ; 0          ; 0          ; 0       ; 1       ; 0       ; 0       ; 1          ;
+; state.d    ; 0          ; 0          ; 0          ; 0          ; 1       ; 0       ; 0       ; 0       ; 1          ;
+; state.wEnd ; 0          ; 0          ; 0          ; 1          ; 0       ; 0       ; 0       ; 0       ; 1          ;
+; state.aEnd ; 0          ; 0          ; 1          ; 0          ; 0       ; 0       ; 0       ; 0       ; 1          ;
+; state.sEnd ; 0          ; 1          ; 0          ; 0          ; 0       ; 0       ; 0       ; 0       ; 1          ;
+; state.dEnd ; 1          ; 0          ; 0          ; 0          ; 0       ; 0       ; 0       ; 0       ; 1          ;
++------------+------------+------------+------------+------------+---------+---------+---------+---------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                            ;
++----------------------------------------------------+--------------------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                              ; Free of Timing Hazards ;
++----------------------------------------------------+--------------------------------------------------+------------------------+
+; keyboard:inst|keyInterface:inst1|\handshake:move   ; keyboard:inst|keyInterface:inst1|\handshake:move ; yes                    ;
+; keyboard:inst|keyInterface:inst1|\handshake:dir[1] ; keyboard:inst|keyInterface:inst1|\handshake:move ; yes                    ;
+; keyboard:inst|keyInterface:inst1|\handshake:dir[0] ; keyboard:inst|keyInterface:inst1|\handshake:move ; yes                    ;
+; keyboard:inst|keyInterface:inst1|\handshake:ack    ; GND                                              ; yes                    ;
+; keyboard:inst|keyCapture:ins3t|keyReady            ; GND                                              ; yes                    ;
+; Number of user-specified and inferred latches = 5  ;                                                  ;                        ;
++----------------------------------------------------+--------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                 ;
++---------------------------------------+--------------------------------------------+
+; Register name                         ; Reason for Removal                         ;
++---------------------------------------+--------------------------------------------+
+; keyboard:inst|keyMap:inst3|keyAckout  ; Merged with keyboard:inst|keyMap:inst3|key ;
+; Total Number of Removed Registers = 1 ;                                            ;
++---------------------------------------+--------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 43    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 30    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 22    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Wed Apr 16 14:33:42 2014
+    Info: Processing started: Wed Apr 16 16:26:39 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 2048 -c 2048
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/dreg.vhd
+    Info (12022): Found design unit 1: Dreg-Behavioral
+    Info (12023): Found entity 1: Dreg
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/psclksample.vhd
+    Info (12022): Found design unit 1: psclk-Behavioral
+    Info (12023): Found entity 1: psclk
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/clkdiv.vhd
+    Info (12022): Found design unit 1: clkDiv-Behavioral
+    Info (12023): Found entity 1: clkDiv
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9/hexdriver.vhd
+    Info (12022): Found design unit 1: hexDriver-behavioral
+    Info (12023): Found entity 1: hexDriver
 Info (12021): Found 1 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/keyboard.bdf
     Info (12023): Found entity 1: keyboard
 Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/keymap.vhd
@@ -171,40 +325,56 @@ Info (12021): Found 2 design units, including 1 entities, in source file /docume
     Info (12023): Found entity 1: vga_controller
 Info (12021): Found 1 design units, including 1 entities, in source file 2048.bdf
     Info (12023): Found entity 1: 2048
-Error (10995): VHDL error at gameBoard.vhd(16): block comments are not supported in VHDL_1993 File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 16
-Error (10500): VHDL syntax error at gameBoard.vhd(16) near text "board_state";  expecting "begin", or a declaration statement File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 16
-Error (10500): VHDL syntax error at gameBoard.vhd(30) near text ";";  expecting "end", or "(", or an identifier, or a sequential statement File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 30
-Error (10500): VHDL syntax error at gameBoard.vhd(35) near text "if";  expecting "end", or "(", or an identifier ("if" is a reserved keyword), or a concurrent statement File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 35
-Error (10500): VHDL syntax error at gameBoard.vhd(35) near text "then";  expecting "<=" File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 35
-Error (10500): VHDL syntax error at gameBoard.vhd(37) near text "=";  expecting "(", or "'", or "." File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 37
-Error (10500): VHDL syntax error at gameBoard.vhd(38) near text "loop";  expecting ";", or an identifier ("loop" is a reserved keyword), or "architecture" File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 38
-Error (10500): VHDL syntax error at gameBoard.vhd(43) near text "if";  expecting ";", or an identifier ("if" is a reserved keyword), or "architecture" File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 43
-Info (12021): Found 0 design units, including 0 entities, in source file gameboard.vhd
-Error (10430): VHDL Primary Unit Declaration error at gameBoardH.vhd(6): primary unit "gameBoard" already exists in library "work" File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 6
-Error (10784): HDL error at gameBoard.vhd(7): see declaration for object "gameBoard" File: E:/Documents/ECE385/ECE385/2048/gameBoard.vhd Line: 7
-Error (10995): VHDL error at gameBoardH.vhd(24): block comments are not supported in VHDL_1993 File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 24
-Error (10500): VHDL syntax error at gameBoardH.vhd(25) near text ":";  expecting "&", or "+", or "-", or "downto", or "to" File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 25
-Error (10500): VHDL syntax error at gameBoardH.vhd(26) near text ":";  expecting "&", or "+", or "-", or "downto", or "to" File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 26
-Error (10500): VHDL syntax error at gameBoardH.vhd(27) near text "=";  expecting "(", or "'", or "." File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 27
-Error (10500): VHDL syntax error at gameBoardH.vhd(28) near text "loop";  expecting "if" File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 28
-Error (10500): VHDL syntax error at gameBoardH.vhd(32) near text ":";  expecting "&", or "+", or "-", or "downto", or "to" File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 32
-Error (10500): VHDL syntax error at gameBoardH.vhd(33) near text "range";  expecting "(", or an identifier ("range" is a reserved keyword), or  unary operator File: E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd Line: 33
-Info (12021): Found 0 design units, including 0 entities, in source file gameboardh.vhd
-Error (10500): VHDL syntax error at newTile.vhd(11) near text "architecture";  expecting "end", or "begin", or a declaration statement File: E:/Documents/ECE385/ECE385/2048/newTile.vhd Line: 11
-Error (10396): VHDL syntax error at newTile.vhd(21): name used in construct must match previously specified name "newTile" File: E:/Documents/ECE385/ECE385/2048/newTile.vhd Line: 21
-Error (10523): Ignored construct newTile at newTile.vhd(6) due to previous errors File: E:/Documents/ECE385/ECE385/2048/newTile.vhd Line: 6
-Info (12021): Found 0 design units, including 0 entities, in source file newtile.vhd
-Error (10500): VHDL syntax error at keyInterface.vhd(29) near text ")";  expecting "(", or an identifier, or  unary operator File: E:/Documents/ECE385/ECE385/2048/keyInterface.vhd Line: 29
-Error (10500): VHDL syntax error at keyInterface.vhd(32) near text ")";  expecting "(", or an identifier, or  unary operator File: E:/Documents/ECE385/ECE385/2048/keyInterface.vhd Line: 32
-Error (10500): VHDL syntax error at keyInterface.vhd(35) near text ")";  expecting "(", or an identifier, or  unary operator File: E:/Documents/ECE385/ECE385/2048/keyInterface.vhd Line: 35
-Error (10500): VHDL syntax error at keyInterface.vhd(38) near text ")";  expecting "(", or an identifier, or  unary operator File: E:/Documents/ECE385/ECE385/2048/keyInterface.vhd Line: 38
-Error (10500): VHDL syntax error at keyInterface.vhd(41) near text ")";  expecting "(", or an identifier, or  unary operator File: E:/Documents/ECE385/ECE385/2048/keyInterface.vhd Line: 41
-Error (10500): VHDL syntax error at keyInterface.vhd(48) near text "behavioral";  expecting "if" File: E:/Documents/ECE385/ECE385/2048/keyInterface.vhd Line: 48
-Info (12021): Found 0 design units, including 0 entities, in source file keyinterface.vhd
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 26 errors, 1 warning
-    Error: Peak virtual memory: 471 megabytes
-    Error: Processing ended: Wed Apr 16 14:33:43 2014
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Info (12021): Found 2 design units, including 1 entities, in source file gameboardh.vhd
+    Info (12022): Found design unit 1: gameBoard-behavioral
+    Info (12023): Found entity 1: gameBoard
+Info (12021): Found 2 design units, including 1 entities, in source file newtile.vhd
+    Info (12022): Found design unit 1: newTile-behavioral
+    Info (12023): Found entity 1: newTile
+Info (12021): Found 2 design units, including 1 entities, in source file keyinterface.vhd
+    Info (12022): Found design unit 1: keyInterface-behavioral
+    Info (12023): Found entity 1: keyInterface
+Info (12127): Elaborating entity "2048" for the top level hierarchy
+Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:inst"
+Info (12128): Elaborating entity "keyInterface" for hierarchy "keyboard:inst|keyInterface:inst1"
+Warning (10492): VHDL Process Statement warning at keyInterface.vhd(29): signal "keyCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at keyInterface.vhd(17): inferring latch(es) for signal or variable "move", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at keyInterface.vhd(17): inferring latch(es) for signal or variable "ack", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at keyInterface.vhd(17): inferring latch(es) for signal or variable "dir", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "handshake:dir[0]" at keyInterface.vhd(24)
+Info (10041): Inferred latch for "handshake:dir[1]" at keyInterface.vhd(24)
+Info (10041): Inferred latch for "handshake:ack" at keyInterface.vhd(24)
+Info (10041): Inferred latch for "handshake:move" at keyInterface.vhd(24)
+Info (12128): Elaborating entity "keyMap" for hierarchy "keyboard:inst|keyMap:inst3"
+Warning (10492): VHDL Process Statement warning at keymap.vhd(28): signal "key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "clkDiv" for hierarchy "keyboard:inst|clkDiv:inst"
+Info (12128): Elaborating entity "keyCapture" for hierarchy "keyboard:inst|keyCapture:ins3t"
+Warning (10492): VHDL Process Statement warning at keyCapt.vhd(35): signal "keyRed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at keyCapt.vhd(38): signal "keyAck" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at keyCapt.vhd(18): inferring latch(es) for signal or variable "keyReady", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "keyReady" at keyCapt.vhd(18)
+Info (12128): Elaborating entity "psclk" for hierarchy "keyboard:inst|psclk:inst2"
+Info (12128): Elaborating entity "Dreg" for hierarchy "keyboard:inst|psclk:inst2|Dreg:reg1"
+Info (12128): Elaborating entity "hexDriver" for hierarchy "hexDriver:inst3"
+Warning (13012): Latch keyboard:inst|keyInterface:inst1|\handshake:move has unsafe behavior
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal keyboard:inst|keyInterface:inst1|\handshake:move
+Warning (13012): Latch keyboard:inst|keyInterface:inst1|\handshake:dir[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keyboard:inst|keyMap:inst3|state.s
+Warning (13012): Latch keyboard:inst|keyInterface:inst1|\handshake:dir[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keyboard:inst|keyMap:inst3|state.w
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "keyPressH[1]" is stuck at GND
+    Warning (13410): Pin "keyPressL[3]" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 90 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 487 megabytes
+    Info: Processing ended: Wed Apr 16 16:26:40 2014
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

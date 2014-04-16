@@ -21,16 +21,17 @@ begin
 	type board is array(row, row) of std_logic_vector(10 downto 0);
 	variable gb : board; 
 	begin
-		/*if (reset = '1') then
-			for index in row:
-				for jndex in row:
-					gb(index, jndex) = "00000000000";
+		if (reset = '1') then
+			for index in row loop
+				for jndex in row loop
+					gb(index, jndex) := "00000000000";
 				end loop;
 			end loop;
 		else if (move = '1') then
-			if(tileMove = '0') then --down
-				for index in row: --needs work to ensure go from bottom up
-					for jndex in range 3 to 1:*/
+			if(move = '0') then --down
+			end if;
+		end if;
+		end if;			
 	end process;
 end behavioral;
 						

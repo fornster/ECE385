@@ -16,33 +16,37 @@ architecture behavioral of keyInterface is
 begin
 	handshake : process(newKey, MoveAck)
 	variable currKey : std_logic_vector(7 downto 0);
-	variable move, reset, ack : std_logic;
-	variable dir : std_logic_vector(1 downto 0);
+	variable move, reset, ack : std_logic := '0';
+	variable dir : std_logic_vector(1 downto 0) := "00";
 	begin
-		ack := '0';
+		--ack := '0';
 		reset := '0';
 		if(moveAck = '1' and move = '1') then  --Need to figure out handshake protocol
 			move := '0';
 			ack := '1';
-		if(newKey = '1' and move = '0') then
+		elsif(newKey = '1' and move = '0') then
+			
 			currKey := keyCode;
-			if(currKey = ) --S
+			if(currKey = "00011011") then --S
 				move := '1';
 				dir := "00";
-			elsif (currKey = ) then --D
+			elsif (currKey = "00100011") then --D
 				move := '1';
 				dir := "01";
-			elsif (currKey = ) then --W
+			elsif (currKey = "00011101") then --W
 				move := '1';
 				dir := "10";
-			elsif (currKey = ) then	--A
+			elsif (currKey = "00011100") then	--A
 				move := '1';
 				dir := "11";
-			elsif (currkey = ) then--R, keyboard restart
+			elsif (currkey = "00101101") then--R, keyboard restart
 				reset := '1';
+			end if;
+			ack := '0';
 		end if;
 		newMove <= move;
 		keyAck <= ack;
 		keyReset <= reset;
 		moveDir <= dir;
+	end process;
 end behavioral;
