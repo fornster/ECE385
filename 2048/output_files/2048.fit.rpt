@@ -1,6 +1,6 @@
 Fitter report for 2048
-Thu Apr 17 07:56:25 2014
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Thu Apr 17 09:52:11 2014
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -10,33 +10,34 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   2. Fitter Summary
   3. Fitter Settings
   4. Parallel Compilation
-  5. Incremental Compilation Preservation Summary
-  6. Incremental Compilation Partition Settings
-  7. Incremental Compilation Placement Preservation
-  8. Pin-Out File
-  9. Fitter Resource Usage Summary
- 10. Fitter Partition Statistics
- 11. Input Pins
- 12. Output Pins
- 13. I/O Bank Usage
- 14. All Package Pins
- 15. Output Pin Default Load For Reported TCO
- 16. Fitter Resource Utilization by Entity
- 17. Delay Chain Summary
- 18. Pad To Core Delay Chain Fanout
- 19. Control Signals
- 20. Global & Other Fast Signals
- 21. Non-Global High Fan-Out Signals
- 22. Other Routing Usage Summary
- 23. LAB Logic Elements
- 24. LAB-wide Signals
- 25. LAB Signals Sourced
- 26. LAB Signals Sourced Out
- 27. LAB Distinct Inputs
- 28. Fitter Device Options
- 29. Operating Settings and Conditions
- 30. Fitter Messages
- 31. Fitter Suppressed Messages
+  5. Ignored Assignments
+  6. Incremental Compilation Preservation Summary
+  7. Incremental Compilation Partition Settings
+  8. Incremental Compilation Placement Preservation
+  9. Pin-Out File
+ 10. Fitter Resource Usage Summary
+ 11. Fitter Partition Statistics
+ 12. Input Pins
+ 13. Output Pins
+ 14. I/O Bank Usage
+ 15. All Package Pins
+ 16. Output Pin Default Load For Reported TCO
+ 17. Fitter Resource Utilization by Entity
+ 18. Delay Chain Summary
+ 19. Pad To Core Delay Chain Fanout
+ 20. Control Signals
+ 21. Global & Other Fast Signals
+ 22. Non-Global High Fan-Out Signals
+ 23. Other Routing Usage Summary
+ 24. LAB Logic Elements
+ 25. LAB-wide Signals
+ 26. LAB Signals Sourced
+ 27. LAB Signals Sourced Out
+ 28. LAB Distinct Inputs
+ 29. Fitter Device Options
+ 30. Operating Settings and Conditions
+ 31. Fitter Messages
+ 32. Fitter Suppressed Messages
 
 
 
@@ -59,26 +60,26 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Fitter Summary                                                                  ;
-+------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Thu Apr 17 07:56:25 2014      ;
-; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
-; Revision Name                      ; 2048                                       ;
-; Top-level Entity Name              ; 2048                                       ;
-; Family                             ; Cyclone II                                 ;
-; Device                             ; EP2C35F672C6                               ;
-; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 88 / 33,216 ( < 1 % )                      ;
-;     Total combinational functions  ; 74 / 33,216 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 55 / 33,216 ( < 1 % )                      ;
-; Total registers                    ; 55                                         ;
-; Total pins                         ; 73 / 475 ( 15 % )                          ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0 / 483,840 ( 0 % )                        ;
-; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
-+------------------------------------+--------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Fitter Summary                                                                        ;
++------------------------------------+--------------------------------------------------+
+; Fitter Status                      ; Successful - Thu Apr 17 09:52:11 2014            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; 2048                                             ;
+; Top-level Entity Name              ; 2048                                             ;
+; Family                             ; Cyclone II                                       ;
+; Device                             ; EP2C35F672C6                                     ;
+; Timing Models                      ; Final                                            ;
+; Total logic elements               ; 93 / 33,216 ( < 1 % )                            ;
+;     Total combinational functions  ; 79 / 33,216 ( < 1 % )                            ;
+;     Dedicated logic registers      ; 55 / 33,216 ( < 1 % )                            ;
+; Total registers                    ; 55                                               ;
+; Total pins                         ; 69 / 475 ( 15 % )                                ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0 / 483,840 ( 0 % )                              ;
+; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                   ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
++------------------------------------+--------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -143,14 +144,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++----------------------------------------------------------------------------------------+
+; Ignored Assignments                                                                    ;
++----------+----------------+--------------+------------+---------------+----------------+
+; Name     ; Ignored Entity ; Ignored From ; Ignored To ; Ignored Value ; Ignored Source ;
++----------+----------------+--------------+------------+---------------+----------------+
+; Location ;                ;              ; dir[0]     ; PIN_AF22      ; QSF Assignment ;
+; Location ;                ;              ; dir[1]     ; PIN_AE22      ; QSF Assignment ;
+; Location ;                ;              ; moveAck    ; PIN_W26       ; QSF Assignment ;
+; Location ;                ;              ; newMove    ; PIN_V18       ; QSF Assignment ;
++----------+----------------+--------------+------------+---------------+----------------+
+
+
 +----------------------------------------------+
 ; Incremental Compilation Preservation Summary ;
 +---------------------+------------------------+
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 209 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 209 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 210 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 210 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -173,7 +186,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 206     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 207     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -181,7 +194,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/2048.pin.
+The pin-out file can be found in C:/Users/Jacob/Documents/GitHub/ECE385/2048/output_files/2048.pin.
 
 
 +---------------------------------------------------------------------+
@@ -189,19 +202,19 @@ The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/20
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 88 / 33,216 ( < 1 % ) ;
-;     -- Combinational with no register       ; 33                    ;
+; Total logic elements                        ; 93 / 33,216 ( < 1 % ) ;
+;     -- Combinational with no register       ; 38                    ;
 ;     -- Register only                        ; 14                    ;
 ;     -- Combinational with a register        ; 41                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 32                    ;
+;     -- 4 input functions                    ; 37                    ;
 ;     -- 3 input functions                    ; 3                     ;
 ;     -- <=2 input functions                  ; 39                    ;
 ;     -- Register only                        ; 14                    ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 49                    ;
+;     -- normal mode                          ; 54                    ;
 ;     -- arithmetic mode                      ; 25                    ;
 ;                                             ;                       ;
 ; Total registers*                            ; 55 / 34,593 ( < 1 % ) ;
@@ -210,7 +223,7 @@ The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/20
 ;                                             ;                       ;
 ; Total LABs:  partially or completely used   ; 8 / 2,076 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 73 / 475 ( 15 % )     ;
+; I/O pins                                    ; 69 / 475 ( 15 % )     ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )        ;
 ;                                             ;                       ;
 ; Global signals                              ; 3                     ;
@@ -227,8 +240,8 @@ The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/20
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
 ; Maximum fan-out                             ; 48                    ;
 ; Highest non-global fan-out                  ; 48                    ;
-; Total fan-out                               ; 414                   ;
-; Average fan-out                             ; 1.92                  ;
+; Total fan-out                               ; 453                   ;
+; Average fan-out                             ; 2.06                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -241,19 +254,19 @@ The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/20
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 88 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 33                   ; 0                              ;
+; Total logic elements                        ; 93 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 38                   ; 0                              ;
 ;     -- Register only                        ; 14                   ; 0                              ;
 ;     -- Combinational with a register        ; 41                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 32                   ; 0                              ;
+;     -- 4 input functions                    ; 37                   ; 0                              ;
 ;     -- 3 input functions                    ; 3                    ; 0                              ;
 ;     -- <=2 input functions                  ; 39                   ; 0                              ;
 ;     -- Register only                        ; 14                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 49                   ; 0                              ;
+;     -- normal mode                          ; 54                   ; 0                              ;
 ;     -- arithmetic mode                      ; 25                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total registers                             ; 55                   ; 0                              ;
@@ -262,7 +275,7 @@ The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/20
 ; Total LABs:  partially or completely used   ; 8 / 2076 ( < 1 % )   ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
-; I/O pins                                    ; 73                   ; 0                              ;
+; I/O pins                                    ; 69                   ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )       ; 0 / 70 ( 0 % )                 ;
 ; Total memory bits                           ; 0                    ; 0                              ;
 ; Total RAM block bits                        ; 0                    ; 0                              ;
@@ -275,16 +288,16 @@ The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/20
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 414                  ; 0                              ;
-;     -- Registered Connections               ; 166                  ; 0                              ;
+;     -- Total Connections                    ; 453                  ; 0                              ;
+;     -- Registered Connections               ; 181                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Partition Interface                         ;                      ;                                ;
-;     -- Input Ports                          ; 5                    ; 0                              ;
-;     -- Output Ports                         ; 68                   ; 0                              ;
+;     -- Input Ports                          ; 4                    ; 0                              ;
+;     -- Output Ports                         ; 65                   ; 0                              ;
 ;     -- Bidir Ports                          ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Registered Ports                            ;                      ;                                ;
@@ -303,17 +316,16 @@ The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/20
 +---------------------------------------------+----------------------+--------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                    ;
-+---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
-+---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; clk     ; N2    ; 2        ; 0            ; 18           ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; moveAck ; W26   ; 6        ; 65           ; 10           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; ps2clk  ; D26   ; 5        ; 65           ; 31           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; psData  ; C24   ; 5        ; 65           ; 32           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; reset   ; G26   ; 5        ; 65           ; 27           ; 1           ; 48                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-+---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                   ;
++--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
++--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; clk    ; N2    ; 2        ; 0            ; 18           ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ps2clk ; D26   ; 5        ; 65           ; 31           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; psData ; C24   ; 5        ; 65           ; 32           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; reset  ; G26   ; 5        ; 65           ; 27           ; 1           ; 48                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
++--------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -353,8 +365,6 @@ The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/20
 ; Red[9]        ; E10   ; 3        ; 18           ; 36           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; VGA_clk       ; B8    ; 3        ; 16           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; blank         ; D6    ; 3        ; 11           ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; dir[0]        ; AF22  ; 7        ; 59           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; dir[1]        ; AE22  ; 7        ; 59           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; freeTiles[0]  ; AE23  ; 7        ; 63           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; freeTiles[10] ; AA13  ; 7        ; 35           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; freeTiles[11] ; AC14  ; 7        ; 35           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
@@ -386,7 +396,6 @@ The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/20
 ; keyPressL[4]  ; AE11  ; 8        ; 27           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; keyPressL[5]  ; V14   ; 8        ; 27           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; keyPressL[6]  ; V13   ; 8        ; 27           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; newMove       ; V18   ; 7        ; 59           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; sync          ; B7    ; 3        ; 11           ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; vs            ; D8    ; 3        ; 14           ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 +---------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
@@ -402,8 +411,8 @@ The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/20
 ; 3        ; 35 / 56 ( 63 % ) ; 3.3V          ; --           ;
 ; 4        ; 0 / 58 ( 0 % )   ; 3.3V          ; --           ;
 ; 5        ; 3 / 65 ( 5 % )   ; 3.3V          ; --           ;
-; 6        ; 9 / 59 ( 15 % )  ; 3.3V          ; --           ;
-; 7        ; 17 / 58 ( 29 % ) ; 3.3V          ; --           ;
+; 6        ; 8 / 59 ( 14 % )  ; 3.3V          ; --           ;
+; 7        ; 14 / 58 ( 24 % ) ; 3.3V          ; --           ;
 ; 8        ; 9 / 56 ( 16 % )  ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
@@ -562,7 +571,7 @@ The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/20
 ; AE19     ; 214        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE20     ; 224        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE21     ; 228        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE22     ; 236        ; 7        ; dir[1]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AE22     ; 236        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE23     ; 244        ; 7        ; freeTiles[0]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AE24     ; 247        ; 6        ; ~LVDS150p/nCEO~                          ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AE25     ; 246        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -587,7 +596,7 @@ The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/20
 ; AF19     ; 213        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF20     ; 223        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF21     ; 227        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF22     ; 235        ; 7        ; dir[0]                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AF22     ; 235        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF23     ; 243        ; 7        ; freeTiles[1]                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AF24     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF25     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1024,7 +1033,7 @@ The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/20
 ; V15      ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; V16      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; V17      ; 218        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; V18      ; 233        ; 7        ; newMove                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; V18      ; 233        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V19      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; V20      ; 251        ; 6        ; keyPressH[0]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; V21      ; 252        ; 6        ; keyPressH[1]                             ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
@@ -1058,7 +1067,7 @@ The pin-out file can be found in E:/Documents/ECE385/ECE385/2048/output_files/20
 ; W23      ; 272        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W24      ; 271        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W25      ; 273        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W26      ; 274        ; 6        ; moveAck                                  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; W26      ; 274        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y1       ; 103        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y2       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y3       ; 108        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1131,17 +1140,18 @@ Note: User assignments will override these defaults. The user specified values a
 +------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                     ; Library Name ;
 +------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------+--------------+
-; |2048                                    ; 88 (0)      ; 55 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 73   ; 0            ; 33 (0)       ; 14 (0)            ; 41 (0)           ; |2048                                                   ;              ;
-;    |GameBoard1:inst6|                    ; 42 (0)      ; 23 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (0)       ; 0 (0)             ; 23 (0)           ; |2048|GameBoard1:inst6                                  ;              ;
-;       |vga_controllerz:vgaSync_instance| ; 42 (42)     ; 23 (23)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 23 (23)          ; |2048|GameBoard1:inst6|vga_controllerz:vgaSync_instance ;              ;
-;    |hexDriver:inst3|                     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |2048|hexDriver:inst3                                   ;              ;
-;    |hexDriver:inst4|                     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; |2048|hexDriver:inst4                                   ;              ;
-;    |keyboard:inst|                       ; 35 (0)      ; 32 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 14 (0)            ; 18 (0)           ; |2048|keyboard:inst                                     ;              ;
-;       |clkDiv:inst|                      ; 11 (11)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 9 (9)            ; |2048|keyboard:inst|clkDiv:inst                         ;              ;
-;       |keyCapture:ins3t|                 ; 22 (22)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 13 (13)           ; 8 (8)            ; |2048|keyboard:inst|keyCapture:ins3t                    ;              ;
-;       |psclk:inst2|                      ; 2 (0)       ; 2 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 1 (1)            ; |2048|keyboard:inst|psclk:inst2                         ;              ;
-;          |Dreg:reg1|                     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |2048|keyboard:inst|psclk:inst2|Dreg:reg1               ;              ;
-;          |Dreg:reg2|                     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |2048|keyboard:inst|psclk:inst2|Dreg:reg2               ;              ;
+; |2048                                    ; 93 (0)      ; 55 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 69   ; 0            ; 38 (0)       ; 14 (0)            ; 41 (0)           ; |2048                                                   ; work         ;
+;    |GameBoard1:inst6|                    ; 47 (0)      ; 23 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 23 (0)           ; |2048|GameBoard1:inst6                                  ; work         ;
+;       |Color_Mapper:color_instance|      ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; |2048|GameBoard1:inst6|Color_Mapper:color_instance      ; work         ;
+;       |vga_controllerz:vgaSync_instance| ; 42 (42)     ; 23 (23)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 23 (23)          ; |2048|GameBoard1:inst6|vga_controllerz:vgaSync_instance ; work         ;
+;    |hexDriver:inst3|                     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; |2048|hexDriver:inst3                                   ; work         ;
+;    |hexDriver:inst4|                     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |2048|hexDriver:inst4                                   ; work         ;
+;    |keyboard:inst|                       ; 35 (0)      ; 32 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 14 (0)            ; 18 (0)           ; |2048|keyboard:inst                                     ; work         ;
+;       |clkDiv:inst|                      ; 11 (11)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 9 (9)            ; |2048|keyboard:inst|clkDiv:inst                         ; work         ;
+;       |keyCapture:ins3t|                 ; 22 (22)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 13 (13)           ; 8 (8)            ; |2048|keyboard:inst|keyCapture:ins3t                    ; work         ;
+;       |psclk:inst2|                      ; 2 (0)       ; 2 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 1 (1)            ; |2048|keyboard:inst|psclk:inst2                         ; work         ;
+;          |Dreg:reg1|                     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |2048|keyboard:inst|psclk:inst2|Dreg:reg1               ; work         ;
+;          |Dreg:reg2|                     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |2048|keyboard:inst|psclk:inst2|Dreg:reg2               ; work         ;
 +------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1151,7 +1161,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------+----------+---------------+---------------+-----------------------+-----+
 ; Name          ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
 +---------------+----------+---------------+---------------+-----------------------+-----+
-; newMove       ; Output   ; --            ; --            ; --                    ; --  ;
 ; VGA_clk       ; Output   ; --            ; --            ; --                    ; --  ;
 ; sync          ; Output   ; --            ; --            ; --                    ; --  ;
 ; blank         ; Output   ; --            ; --            ; --                    ; --  ;
@@ -1167,8 +1176,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Blue[2]       ; Output   ; --            ; --            ; --                    ; --  ;
 ; Blue[1]       ; Output   ; --            ; --            ; --                    ; --  ;
 ; Blue[0]       ; Output   ; --            ; --            ; --                    ; --  ;
-; dir[1]        ; Output   ; --            ; --            ; --                    ; --  ;
-; dir[0]        ; Output   ; --            ; --            ; --                    ; --  ;
 ; freeTiles[15] ; Output   ; --            ; --            ; --                    ; --  ;
 ; freeTiles[14] ; Output   ; --            ; --            ; --                    ; --  ;
 ; freeTiles[13] ; Output   ; --            ; --            ; --                    ; --  ;
@@ -1219,7 +1226,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Red[2]        ; Output   ; --            ; --            ; --                    ; --  ;
 ; Red[1]        ; Output   ; --            ; --            ; --                    ; --  ;
 ; Red[0]        ; Output   ; --            ; --            ; --                    ; --  ;
-; moveAck       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; clk           ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; reset         ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; ps2clk        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
@@ -1232,11 +1238,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                                                     ; Pad To Core Index ; Setting ;
 +-------------------------------------------------------------------------+-------------------+---------+
-; moveAck                                                                 ;                   ;         ;
 ; clk                                                                     ;                   ;         ;
 ; reset                                                                   ;                   ;         ;
 ;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|vs             ; 1                 ; 6       ;
 ;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|hs             ; 1                 ; 6       ;
+;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[0]  ; 1                 ; 6       ;
+;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[1]  ; 1                 ; 6       ;
+;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[2]  ; 1                 ; 6       ;
+;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[3]  ; 1                 ; 6       ;
+;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[4]  ; 1                 ; 6       ;
 ;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[5]  ; 1                 ; 6       ;
 ;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[6]  ; 1                 ; 6       ;
 ;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[7]  ; 1                 ; 6       ;
@@ -1254,11 +1264,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - keyboard:inst|clkDiv:inst|count[5]                               ; 1                 ; 6       ;
 ;      - keyboard:inst|clkDiv:inst|count[6]                               ; 1                 ; 6       ;
 ;      - keyboard:inst|clkDiv:inst|count[7]                               ; 1                 ; 6       ;
-;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[4]  ; 1                 ; 6       ;
-;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[3]  ; 1                 ; 6       ;
-;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[2]  ; 1                 ; 6       ;
-;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[1]  ; 1                 ; 6       ;
-;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[0]  ; 1                 ; 6       ;
 ;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|horiz_count[6] ; 1                 ; 6       ;
 ;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|horiz_count[4] ; 1                 ; 6       ;
 ;      - GameBoard1:inst6|vga_controllerz:vgaSync_instance|horiz_count[3] ; 1                 ; 6       ;
@@ -1286,7 +1291,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ps2clk                                                                  ;                   ;         ;
 ;      - keyboard:inst|psclk:inst2|Dreg:reg1|Q~feeder                     ; 1                 ; 6       ;
 ; psData                                                                  ;                   ;         ;
-;      - keyboard:inst|keyCapture:ins3t|dataIn[10]                        ; 0                 ; 6       ;
+;      - keyboard:inst|keyCapture:ins3t|dataIn[10]~feeder                 ; 0                 ; 6       ;
 +-------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -1295,12 +1300,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                       ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|Equal0~2 ; LCCOMB_X41_Y17_N30 ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|clkdiv   ; LCFF_X64_Y19_N25   ; 22      ; Clock                      ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|Equal0~2 ; LCCOMB_X20_Y35_N30 ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|clkdiv   ; LCFF_X31_Y35_N3    ; 22      ; Clock                      ; yes    ; Global Clock         ; GCLK10           ; --                        ;
 ; clk                                                        ; PIN_N2             ; 10      ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; keyboard:inst|clkDiv:inst|temp                             ; LCFF_X64_Y19_N23   ; 3       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; keyboard:inst|keyCapture:ins3t|keyData[7]~0                ; LCCOMB_X57_Y5_N8   ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; keyboard:inst|psclk:inst2|fall_edge                        ; LCCOMB_X64_Y19_N30 ; 21      ; Clock                      ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; keyboard:inst|clkDiv:inst|temp                             ; LCFF_X64_Y19_N25   ; 3       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; keyboard:inst|keyCapture:ins3t|keyData[7]~0                ; LCCOMB_X38_Y1_N28  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; keyboard:inst|psclk:inst2|fall_edge                        ; LCCOMB_X64_Y19_N30 ; 21      ; Clock                      ; yes    ; Global Clock         ; GCLK4            ; --                        ;
 ; reset                                                      ; PIN_G26            ; 48      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
 +------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
@@ -1310,9 +1315,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
 ; Name                                                     ; Location           ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|clkdiv ; LCFF_X64_Y19_N25   ; 22      ; Global Clock         ; GCLK4            ; --                        ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|clkdiv ; LCFF_X31_Y35_N3    ; 22      ; Global Clock         ; GCLK10           ; --                        ;
 ; clk                                                      ; PIN_N2             ; 10      ; Global Clock         ; GCLK2            ; --                        ;
-; keyboard:inst|psclk:inst2|fall_edge                      ; LCCOMB_X64_Y19_N30 ; 21      ; Global Clock         ; GCLK5            ; --                        ;
+; keyboard:inst|psclk:inst2|fall_edge                      ; LCCOMB_X64_Y19_N30 ; 21      ; Global Clock         ; GCLK4            ; --                        ;
 +----------------------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1322,6 +1327,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                             ; Fan-Out ;
 +------------------------------------------------------------------+---------+
 ; reset                                                            ; 48      ;
+; GameBoard1:inst6|Color_Mapper:color_instance|Blue[4]~4           ; 16      ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|Equal0~2       ; 13      ;
 ; keyboard:inst|keyCapture:ins3t|keyData[7]~0                      ; 8       ;
 ; keyboard:inst|keyCapture:ins3t|keyData[3]                        ; 7       ;
@@ -1335,17 +1341,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; keyboard:inst|keyCapture:ins3t|count[2]                          ; 5       ;
 ; keyboard:inst|keyCapture:ins3t|count[0]                          ; 5       ;
 ; keyboard:inst|keyCapture:ins3t|count[1]                          ; 5       ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[7]  ; 5       ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[8]  ; 5       ;
 ; keyboard:inst|keyCapture:ins3t|count[3]                          ; 4       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|Equal1~2       ; 4       ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[2]  ; 4       ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[3]  ; 4       ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[4]  ; 4       ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[6]  ; 4       ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[5]  ; 4       ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[9]  ; 4       ;
 ; keyboard:inst|clkDiv:inst|temp                                   ; 3       ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[0]  ; 3       ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[1]  ; 3       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|horiz_count[7] ; 3       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|horiz_count[8] ; 3       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|horiz_count[9] ; 3       ;
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[9]  ; 3       ;
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[5]  ; 3       ;
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[6]  ; 3       ;
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[7]  ; 3       ;
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[8]  ; 3       ;
 ; keyboard:inst|psclk:inst2|Dreg:reg1|Q                            ; 2       ;
 ; keyboard:inst|keyCapture:ins3t|dataIn[5]                         ; 2       ;
 ; keyboard:inst|keyCapture:ins3t|dataIn[4]                         ; 2       ;
@@ -1361,11 +1372,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|horiz_count[3] ; 2       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|horiz_count[4] ; 2       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|horiz_count[6] ; 2       ;
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[0]  ; 2       ;
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[1]  ; 2       ;
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[2]  ; 2       ;
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[3]  ; 2       ;
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count[4]  ; 2       ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|LessThan3~0    ; 2       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|clkdiv         ; 2       ;
 ; keyboard:inst|clkDiv:inst|count[7]                               ; 2       ;
 ; keyboard:inst|clkDiv:inst|count[6]                               ; 2       ;
@@ -1403,11 +1410,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; keyboard:inst|keyCapture:ins3t|count~0                           ; 1       ;
 ; keyboard:inst|psclk:inst2|Dreg:reg2|Q                            ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|horiz_count~2  ; 1       ;
+; keyboard:inst|keyCapture:ins3t|dataIn[2]                         ; 1       ;
+; keyboard:inst|keyCapture:ins3t|Equal0~0                          ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count~3   ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count~2   ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count~1   ; 1       ;
-; keyboard:inst|keyCapture:ins3t|dataIn[2]                         ; 1       ;
-; keyboard:inst|keyCapture:ins3t|Equal0~0                          ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|hsync_proc~1   ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|hsync_proc~0   ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|Equal2~2       ; 1       ;
@@ -1415,11 +1422,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|Equal2~0       ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|horiz_count~1  ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|horiz_count~0  ; 1       ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|Equal0~1       ; 1       ;
+; GameBoard1:inst6|vga_controllerz:vgaSync_instance|Equal0~0       ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vert_count~0   ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|Equal1~1       ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|Equal1~0       ; 1       ;
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|Equal0~1       ; 1       ;
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|Equal0~0       ; 1       ;
 ; hexDriver:inst4|Mux6~0                                           ; 1       ;
 ; hexDriver:inst4|Mux5~0                                           ; 1       ;
 ; hexDriver:inst4|Mux4~0                                           ; 1       ;
@@ -1434,11 +1441,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; hexDriver:inst3|Mux2~0                                           ; 1       ;
 ; hexDriver:inst3|Mux1~0                                           ; 1       ;
 ; hexDriver:inst3|Mux0~0                                           ; 1       ;
+; GameBoard1:inst6|Color_Mapper:color_instance|Blue[4]~3           ; 1       ;
+; GameBoard1:inst6|Color_Mapper:color_instance|Blue[4]~2           ; 1       ;
+; GameBoard1:inst6|Color_Mapper:color_instance|Blue[4]~1           ; 1       ;
+; GameBoard1:inst6|Color_Mapper:color_instance|Blue[4]~0           ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|hs             ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|vs             ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|blank_proc~1   ; 1       ;
 ; GameBoard1:inst6|vga_controllerz:vgaSync_instance|blank_proc~0   ; 1       ;
-; GameBoard1:inst6|vga_controllerz:vgaSync_instance|LessThan3~0    ; 1       ;
 ; keyboard:inst|clkDiv:inst|count[7]~22                            ; 1       ;
 ; keyboard:inst|clkDiv:inst|count[6]~21                            ; 1       ;
 ; keyboard:inst|clkDiv:inst|count[6]~20                            ; 1       ;
@@ -1485,35 +1495,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 94 / 94,460 ( < 1 % ) ;
-; C16 interconnects           ; 11 / 3,315 ( < 1 % )  ;
-; C4 interconnects            ; 29 / 60,840 ( < 1 % ) ;
-; Direct links                ; 53 / 94,460 ( < 1 % ) ;
+; Block interconnects         ; 97 / 94,460 ( < 1 % ) ;
+; C16 interconnects           ; 5 / 3,315 ( < 1 % )   ;
+; C4 interconnects            ; 36 / 60,840 ( < 1 % ) ;
+; Direct links                ; 48 / 94,460 ( < 1 % ) ;
 ; Global clocks               ; 3 / 16 ( 19 % )       ;
-; Local interconnects         ; 61 / 33,216 ( < 1 % ) ;
+; Local interconnects         ; 68 / 33,216 ( < 1 % ) ;
 ; R24 interconnects           ; 10 / 3,091 ( < 1 % )  ;
-; R4 interconnects            ; 83 / 81,294 ( < 1 % ) ;
+; R4 interconnects            ; 74 / 81,294 ( < 1 % ) ;
 +-----------------------------+-----------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 11.00) ; Number of LABs  (Total = 8) ;
+; Number of Logic Elements  (Average = 11.63) ; Number of LABs  (Total = 8) ;
 +---------------------------------------------+-----------------------------+
-; 1                                           ; 0                           ;
-; 2                                           ; 1                           ;
+; 1                                           ; 1                           ;
+; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
-; 7                                           ; 2                           ;
+; 7                                           ; 1                           ;
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
 ; 10                                          ; 1                           ;
 ; 11                                          ; 0                           ;
 ; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
+; 13                                          ; 1                           ;
 ; 14                                          ; 1                           ;
 ; 15                                          ; 0                           ;
 ; 16                                          ; 3                           ;
@@ -1523,18 +1533,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.50) ; Number of LABs  (Total = 8) ;
+; LAB-wide Signals  (Average = 1.75) ; Number of LABs  (Total = 8) ;
 +------------------------------------+-----------------------------+
-; 1 Async. clear                     ; 4                           ;
-; 1 Clock                            ; 6                           ;
-; 1 Clock enable                     ; 2                           ;
+; 1 Async. clear                     ; 6                           ;
+; 1 Clock                            ; 7                           ;
+; 1 Clock enable                     ; 1                           ;
 +------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 17.13) ; Number of LABs  (Total = 8) ;
+; Number of Signals Sourced  (Average = 18.13) ; Number of LABs  (Total = 8) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
@@ -1545,23 +1555,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 6                                            ; 0                           ;
 ; 7                                            ; 1                           ;
 ; 8                                            ; 0                           ;
-; 9                                            ; 1                           ;
+; 9                                            ; 0                           ;
 ; 10                                           ; 0                           ;
 ; 11                                           ; 0                           ;
 ; 12                                           ; 0                           ;
 ; 13                                           ; 0                           ;
-; 14                                           ; 1                           ;
-; 15                                           ; 0                           ;
+; 14                                           ; 0                           ;
+; 15                                           ; 1                           ;
 ; 16                                           ; 0                           ;
-; 17                                           ; 0                           ;
+; 17                                           ; 1                           ;
 ; 18                                           ; 0                           ;
 ; 19                                           ; 0                           ;
 ; 20                                           ; 0                           ;
 ; 21                                           ; 0                           ;
 ; 22                                           ; 0                           ;
 ; 23                                           ; 0                           ;
-; 24                                           ; 0                           ;
-; 25                                           ; 1                           ;
+; 24                                           ; 1                           ;
+; 25                                           ; 0                           ;
 ; 26                                           ; 1                           ;
 ; 27                                           ; 2                           ;
 +----------------------------------------------+-----------------------------+
@@ -1570,21 +1580,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 7.50) ; Number of LABs  (Total = 8) ;
+; Number of Signals Sourced Out  (Average = 6.88) ; Number of LABs  (Total = 8) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 0                           ;
-; 2                                               ; 2                           ;
+; 1                                               ; 2                           ;
+; 2                                               ; 0                           ;
 ; 3                                               ; 0                           ;
-; 4                                               ; 1                           ;
-; 5                                               ; 0                           ;
+; 4                                               ; 0                           ;
+; 5                                               ; 1                           ;
 ; 6                                               ; 0                           ;
 ; 7                                               ; 1                           ;
-; 8                                               ; 0                           ;
+; 8                                               ; 1                           ;
 ; 9                                               ; 1                           ;
 ; 10                                              ; 0                           ;
 ; 11                                              ; 1                           ;
-; 12                                              ; 1                           ;
+; 12                                              ; 0                           ;
 ; 13                                              ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
@@ -1592,23 +1602,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 7.13) ; Number of LABs  (Total = 8) ;
+; Number of Distinct Inputs  (Average = 6.50) ; Number of LABs  (Total = 8) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
-; 2                                           ; 0                           ;
+; 2                                           ; 1                           ;
 ; 3                                           ; 2                           ;
 ; 4                                           ; 1                           ;
-; 5                                           ; 1                           ;
+; 5                                           ; 2                           ;
 ; 6                                           ; 0                           ;
 ; 7                                           ; 0                           ;
-; 8                                           ; 1                           ;
-; 9                                           ; 1                           ;
+; 8                                           ; 0                           ;
+; 9                                           ; 0                           ;
 ; 10                                          ; 0                           ;
 ; 11                                          ; 1                           ;
 ; 12                                          ; 0                           ;
 ; 13                                          ; 0                           ;
-; 14                                          ; 1                           ;
+; 14                                          ; 0                           ;
+; 15                                          ; 0                           ;
+; 16                                          ; 0                           ;
+; 17                                          ; 0                           ;
+; 18                                          ; 0                           ;
+; 19                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -1672,22 +1687,26 @@ Info (176353): Automatically promoted node keyboard:inst|psclk:inst2|fall_edge
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Warning (15705): Ignored locations or region assignments to the following nodes
+    Warning (15706): Node "dir[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "dir[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "moveAck" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "newMove" is assigned to location or region, but does not exist in design
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X44_Y0 to location X54_Y11
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X33_Y0 to location X43_Y11
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.17 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.66 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 68 output pins without output pin load capacitance assignment
-    Info (306007): Pin "newMove" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Warning (306006): Found 65 output pins without output pin load capacitance assignment
     Info (306007): Pin "VGA_clk" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "sync" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "blank" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1703,8 +1722,6 @@ Warning (306006): Found 68 output pins without output pin load capacitance assig
     Info (306007): Pin "Blue[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "Blue[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "Blue[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "dir[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "dir[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "freeTiles[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "freeTiles[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "freeTiles[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1758,19 +1775,20 @@ Warning (306006): Found 68 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file E:/Documents/ECE385/ECE385/2048/output_files/2048.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 660 megabytes
-    Info: Processing ended: Thu Apr 17 07:56:25 2014
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:07
+Info (144001): Generated suppressed messages file C:/Users/Jacob/Documents/GitHub/ECE385/2048/output_files/2048.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 756 megabytes
+    Info: Processing ended: Thu Apr 17 09:52:12 2014
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in E:/Documents/ECE385/ECE385/2048/output_files/2048.fit.smsg.
+The suppressed messages can be found in C:/Users/Jacob/Documents/GitHub/ECE385/2048/output_files/2048.fit.smsg.
 
 

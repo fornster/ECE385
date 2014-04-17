@@ -71,7 +71,7 @@ signal DrawXSig, DrawYSig : std_logic_vector(9 downto 0);
 signal keyIn : std_logic_vector(7 downto 0);
 begin
 
-Reset_h <= not Reset; -- The push buttons are active low
+Reset_h <= Reset; -- The push buttons are active low
 
 vgaSync_instance : vga_controllerz
    Port map(clk => clk,

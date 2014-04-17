@@ -3,28 +3,28 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'GameBoard1:inst6|vga_controllerz:vgaSync_instance|clkdiv'
-Slack : -2.196
-TNS   : -35.464
+Slack : -2.073
+TNS   : -30.815
 
 Type  : Slow Model Setup 'keyboard:inst|psclk:inst2|Dreg:reg1|Q'
-Slack : -1.267
-TNS   : -11.987
+Slack : -1.288
+TNS   : -11.334
 
 Type  : Slow Model Setup 'clk'
-Slack : -0.975
-TNS   : -5.769
+Slack : -0.940
+TNS   : -5.401
 
 Type  : Slow Model Setup 'keyboard:inst|clkDiv:inst|temp'
-Slack : 0.508
+Slack : 0.507
 TNS   : 0.000
 
 Type  : Slow Model Hold 'clk'
-Slack : -2.549
-TNS   : -5.098
+Slack : -2.558
+TNS   : -5.107
 
 Type  : Slow Model Hold 'keyboard:inst|clkDiv:inst|temp'
-Slack : -0.238
-TNS   : -0.238
+Slack : -0.237
+TNS   : -0.237
 
 Type  : Slow Model Hold 'keyboard:inst|psclk:inst2|Dreg:reg1|Q'
 Slack : 0.391
@@ -51,15 +51,15 @@ Slack : -0.500
 TNS   : -2.000
 
 Type  : Fast Model Setup 'GameBoard1:inst6|vga_controllerz:vgaSync_instance|clkdiv'
-Slack : -0.533
-TNS   : -6.512
+Slack : -0.388
+TNS   : -4.504
 
 Type  : Fast Model Setup 'keyboard:inst|psclk:inst2|Dreg:reg1|Q'
-Slack : -0.119
-TNS   : -0.952
+Slack : -0.117
+TNS   : -0.936
 
 Type  : Fast Model Setup 'clk'
-Slack : 0.096
+Slack : 0.108
 TNS   : 0.000
 
 Type  : Fast Model Setup 'keyboard:inst|clkDiv:inst|temp'
@@ -67,8 +67,8 @@ Slack : 0.587
 TNS   : 0.000
 
 Type  : Fast Model Hold 'clk'
-Slack : -1.592
-TNS   : -3.184
+Slack : -1.599
+TNS   : -3.191
 
 Type  : Fast Model Hold 'keyboard:inst|clkDiv:inst|temp'
 Slack : -0.207

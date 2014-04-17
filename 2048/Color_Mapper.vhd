@@ -23,10 +23,14 @@ begin
   RGB_Display : process (Tile_on, DrawX, DrawY)
     --variable GreenVar, BlueVar : std_logic_vector(22 downto 0);
   begin
-    if (Tile_on = '1') then -- tile in that spot
-      Red <= "0000000000";
-      Green <= "1111111111";
-      Blue <= "0000000000";
+	 if(DrawY < 300 and DrawY > 100) then
+		Red <= "0111110000";
+      Green <= "0000000000";
+      Blue <= "0001111000";
+    elsif (Tile_on = '1') then -- tile in that spot
+      Red <= "0000010000";
+      Green <= "0111111111";
+      Blue <= "0000001000";
     else          -- gradient background
 		--change depending on where we are vertically or horizontally
       Red   <= DrawX(9 downto 0);

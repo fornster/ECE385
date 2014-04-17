@@ -12,10 +12,10 @@ end entity;
 architecture Behavioral of keyCapture is
 
 signal dataIn : std_logic_vector(10 downto 0) := "00000000000";
-signal count : integer range 10 downto 0 := 0;
+signal count : integer range 11 downto 0 := 0;
 signal keyRed : std_logic := '0';
 begin
-	shift_in : process(clk, reset, dataIn)
+	shift_in : process(clk, reset, dataIn, keyRed, keyAck)
 	begin
 		if(reset = '1') then
 			dataIn <= "00000000000";

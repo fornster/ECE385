@@ -1,6 +1,6 @@
 Analysis & Synthesis report for 2048
-Thu Apr 17 07:56:18 2014
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Thu Apr 17 09:51:53 2014
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -17,10 +17,9 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   9. Registers Removed During Synthesis
  10. Removed Registers Triggering Further Register Optimizations
  11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Port Connectivity Checks: "GameBoard1:inst6|Tiles:tiles_instance"
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 12. Port Connectivity Checks: "GameBoard1:inst6|Tiles:tiles_instance"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -43,24 +42,24 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                    ;
-+------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 17 07:56:18 2014      ;
-; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
-; Revision Name                      ; 2048                                       ;
-; Top-level Entity Name              ; 2048                                       ;
-; Family                             ; Cyclone II                                 ;
-; Total logic elements               ; 93                                         ;
-;     Total combinational functions  ; 74                                         ;
-;     Dedicated logic registers      ; 55                                         ;
-; Total registers                    ; 55                                         ;
-; Total pins                         ; 73                                         ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
-+------------------------------------+--------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                          ;
++------------------------------------+--------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Apr 17 09:51:53 2014            ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
+; Revision Name                      ; 2048                                             ;
+; Top-level Entity Name              ; 2048                                             ;
+; Family                             ; Cyclone II                                       ;
+; Total logic elements               ; 98                                               ;
+;     Total combinational functions  ; 79                                               ;
+;     Dedicated logic registers      ; 55                                               ;
+; Total registers                    ; 55                                               ;
+; Total pins                         ; 69                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
++------------------------------------+--------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -159,26 +158,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                             ;
-+---------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path            ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                        ; Library ;
-+---------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
-; ../lab9_vga_vhdl_Spring2014/dreg.vhd        ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9_vga_vhdl_Spring2014/dreg.vhd        ;         ;
-; ../lab9_vga_vhdl_Spring2014/psclkSample.vhd ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9_vga_vhdl_Spring2014/psclkSample.vhd ;         ;
-; ../lab9_vga_vhdl_Spring2014/clkDiv.vhd      ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9_vga_vhdl_Spring2014/clkDiv.vhd      ;         ;
-; ../lab9/hexDriver.vhd                       ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9/hexDriver.vhd                       ;         ;
-; ../lab9_vga_vhdl_Spring2014/keyboard.bdf    ; yes             ; User Block Diagram/Schematic File  ; E:/Documents/ECE385/ECE385/lab9_vga_vhdl_Spring2014/keyboard.bdf    ;         ;
-; ../lab9_vga_vhdl_Spring2014/keymap.vhd      ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9_vga_vhdl_Spring2014/keymap.vhd      ;         ;
-; ../lab9_vga_vhdl_Spring2014/keyCapt.vhd     ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9_vga_vhdl_Spring2014/keyCapt.vhd     ;         ;
-; 2048.bdf                                    ; yes             ; User Block Diagram/Schematic File  ; E:/Documents/ECE385/ECE385/2048/2048.bdf                            ;         ;
-; keyInterface.vhd                            ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/2048/keyInterface.vhd                    ;         ;
-; GameBoard1.vhd                              ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/2048/GameBoard1.vhd                      ;         ;
-; Tiles.vhd                                   ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/2048/Tiles.vhd                           ;         ;
-; Color_Mapper.vhd                            ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/2048/Color_Mapper.vhd                    ;         ;
-; gameboardarray.vhd                          ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/2048/gameboardarray.vhd                  ;         ;
-; VGA_Controllerz.vhd                         ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/2048/VGA_Controllerz.vhd                 ;         ;
-+---------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
++---------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path            ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                    ; Library ;
++---------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
+; ../lab9_vga_vhdl_Spring2014/dreg.vhd        ; yes             ; User VHDL File                     ; C:/Users/Jacob/Documents/GitHub/ECE385/lab9_vga_vhdl_Spring2014/dreg.vhd        ;         ;
+; ../lab9_vga_vhdl_Spring2014/psclkSample.vhd ; yes             ; User VHDL File                     ; C:/Users/Jacob/Documents/GitHub/ECE385/lab9_vga_vhdl_Spring2014/psclkSample.vhd ;         ;
+; ../lab9_vga_vhdl_Spring2014/clkDiv.vhd      ; yes             ; User VHDL File                     ; C:/Users/Jacob/Documents/GitHub/ECE385/lab9_vga_vhdl_Spring2014/clkDiv.vhd      ;         ;
+; ../lab9/hexDriver.vhd                       ; yes             ; User VHDL File                     ; C:/Users/Jacob/Documents/GitHub/ECE385/lab9/hexDriver.vhd                       ;         ;
+; ../lab9_vga_vhdl_Spring2014/keyboard.bdf    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Jacob/Documents/GitHub/ECE385/lab9_vga_vhdl_Spring2014/keyboard.bdf    ;         ;
+; ../lab9_vga_vhdl_Spring2014/keymap.vhd      ; yes             ; User VHDL File                     ; C:/Users/Jacob/Documents/GitHub/ECE385/lab9_vga_vhdl_Spring2014/keymap.vhd      ;         ;
+; ../lab9_vga_vhdl_Spring2014/keyCapt.vhd     ; yes             ; User VHDL File                     ; C:/Users/Jacob/Documents/GitHub/ECE385/lab9_vga_vhdl_Spring2014/keyCapt.vhd     ;         ;
+; 2048.bdf                                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Jacob/Documents/GitHub/ECE385/2048/2048.bdf                            ;         ;
+; GameBoard1.vhd                              ; yes             ; User VHDL File                     ; C:/Users/Jacob/Documents/GitHub/ECE385/2048/GameBoard1.vhd                      ;         ;
+; Tiles.vhd                                   ; yes             ; User VHDL File                     ; C:/Users/Jacob/Documents/GitHub/ECE385/2048/Tiles.vhd                           ;         ;
+; Color_Mapper.vhd                            ; yes             ; User VHDL File                     ; C:/Users/Jacob/Documents/GitHub/ECE385/2048/Color_Mapper.vhd                    ;         ;
+; gameboardarray.vhd                          ; yes             ; User VHDL File                     ; C:/Users/Jacob/Documents/GitHub/ECE385/2048/gameboardarray.vhd                  ;         ;
+; VGA_Controllerz.vhd                         ; yes             ; User VHDL File                     ; C:/Users/Jacob/Documents/GitHub/ECE385/2048/VGA_Controllerz.vhd                 ;         ;
++---------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -186,28 +184,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 93    ;
+; Estimated Total logic elements              ; 98    ;
 ;                                             ;       ;
-; Total combinational functions               ; 74    ;
+; Total combinational functions               ; 79    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 32    ;
+;     -- 4 input functions                    ; 37    ;
 ;     -- 3 input functions                    ; 3     ;
 ;     -- <=2 input functions                  ; 39    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 49    ;
+;     -- normal mode                          ; 54    ;
 ;     -- arithmetic mode                      ; 25    ;
 ;                                             ;       ;
 ; Total registers                             ; 55    ;
 ;     -- Dedicated logic registers            ; 55    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 73    ;
+; I/O pins                                    ; 69    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; reset ;
 ; Maximum fan-out                             ; 48    ;
-; Total fan-out                               ; 403   ;
-; Average fan-out                             ; 2.00  ;
+; Total fan-out                               ; 439   ;
+; Average fan-out                             ; 2.16  ;
 +---------------------------------------------+-------+
 
 
@@ -216,17 +214,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
-; |2048                                    ; 74 (0)            ; 55 (0)       ; 0           ; 0            ; 0       ; 0         ; 73   ; 0            ; |2048                                                   ;              ;
-;    |GameBoard1:inst6|                    ; 42 (0)            ; 23 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|GameBoard1:inst6                                  ;              ;
-;       |vga_controllerz:vgaSync_instance| ; 42 (42)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|GameBoard1:inst6|vga_controllerz:vgaSync_instance ;              ;
-;    |hexDriver:inst3|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|hexDriver:inst3                                   ;              ;
-;    |hexDriver:inst4|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|hexDriver:inst4                                   ;              ;
-;    |keyboard:inst|                       ; 18 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst                                     ;              ;
-;       |clkDiv:inst|                      ; 11 (11)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|clkDiv:inst                         ;              ;
-;       |keyCapture:ins3t|                 ; 6 (6)             ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|keyCapture:ins3t                    ;              ;
-;       |psclk:inst2|                      ; 1 (1)             ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|psclk:inst2                         ;              ;
-;          |Dreg:reg1|                     ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|psclk:inst2|Dreg:reg1               ;              ;
-;          |Dreg:reg2|                     ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|psclk:inst2|Dreg:reg2               ;              ;
+; |2048                                    ; 79 (0)            ; 55 (0)       ; 0           ; 0            ; 0       ; 0         ; 69   ; 0            ; |2048                                                   ; work         ;
+;    |GameBoard1:inst6|                    ; 47 (0)            ; 23 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|GameBoard1:inst6                                  ; work         ;
+;       |Color_Mapper:color_instance|      ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|GameBoard1:inst6|Color_Mapper:color_instance      ; work         ;
+;       |vga_controllerz:vgaSync_instance| ; 42 (42)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|GameBoard1:inst6|vga_controllerz:vgaSync_instance ; work         ;
+;    |hexDriver:inst3|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|hexDriver:inst3                                   ; work         ;
+;    |hexDriver:inst4|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|hexDriver:inst4                                   ; work         ;
+;    |keyboard:inst|                       ; 18 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst                                     ; work         ;
+;       |clkDiv:inst|                      ; 11 (11)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|clkDiv:inst                         ; work         ;
+;       |keyCapture:ins3t|                 ; 6 (6)             ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|keyCapture:ins3t                    ; work         ;
+;       |psclk:inst2|                      ; 1 (1)             ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|psclk:inst2                         ; work         ;
+;          |Dreg:reg1|                     ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|psclk:inst2|Dreg:reg1               ; work         ;
+;          |Dreg:reg2|                     ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|psclk:inst2|Dreg:reg2               ; work         ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -249,40 +248,34 @@ Encoding Type:  One-Hot
 +------------+------------+------------+------------+------------+---------+---------+---------+---------+------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                 ;
-+------------------------------------------------------+---------------------------------------------+
-; Register name                                        ; Reason for Removal                          ;
-+------------------------------------------------------+---------------------------------------------+
-; keyboard:inst|keyMap:inst3|keyAckout                 ; Merged with keyboard:inst|keyMap:inst3|key  ;
-; keyboard:inst|keyInterface:inst1|\handshake:ack      ; Stuck at GND due to stuck port data_in      ;
-; keyboard:inst|keyInterface:inst1|\handshake:dir[0,1] ; Stuck at GND due to stuck port clock_enable ;
-; keyboard:inst|keyInterface:inst1|newMove             ; Stuck at GND due to stuck port data_in      ;
-; keyboard:inst|keyMap:inst3|key                       ; Lost fanout                                 ;
-; keyboard:inst|keyCapture:ins3t|keyRed                ; Lost fanout                                 ;
-; keyboard:inst|keyMap:inst3|state.idle                ; Lost fanout                                 ;
-; keyboard:inst|keyMap:inst3|state.w                   ; Lost fanout                                 ;
-; keyboard:inst|keyMap:inst3|state.a                   ; Lost fanout                                 ;
-; keyboard:inst|keyMap:inst3|state.s                   ; Lost fanout                                 ;
-; keyboard:inst|keyMap:inst3|state.d                   ; Lost fanout                                 ;
-; keyboard:inst|keyMap:inst3|state.wEnd                ; Lost fanout                                 ;
-; keyboard:inst|keyMap:inst3|state.aEnd                ; Lost fanout                                 ;
-; keyboard:inst|keyMap:inst3|state.sEnd                ; Lost fanout                                 ;
-; keyboard:inst|keyMap:inst3|state.dEnd                ; Lost fanout                                 ;
-; Total Number of Removed Registers = 16               ;                                             ;
-+------------------------------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++----------------------------------------+--------------------------------------------+
+; Register name                          ; Reason for Removal                         ;
++----------------------------------------+--------------------------------------------+
+; keyboard:inst|keyMap:inst3|keyAckout   ; Merged with keyboard:inst|keyMap:inst3|key ;
+; keyboard:inst|keyMap:inst3|key         ; Lost fanout                                ;
+; keyboard:inst|keyCapture:ins3t|keyRed  ; Lost fanout                                ;
+; keyboard:inst|keyMap:inst3|state.idle  ; Lost fanout                                ;
+; keyboard:inst|keyMap:inst3|state.w     ; Lost fanout                                ;
+; keyboard:inst|keyMap:inst3|state.a     ; Lost fanout                                ;
+; keyboard:inst|keyMap:inst3|state.s     ; Lost fanout                                ;
+; keyboard:inst|keyMap:inst3|state.d     ; Lost fanout                                ;
+; keyboard:inst|keyMap:inst3|state.wEnd  ; Lost fanout                                ;
+; keyboard:inst|keyMap:inst3|state.aEnd  ; Lost fanout                                ;
+; keyboard:inst|keyMap:inst3|state.sEnd  ; Lost fanout                                ;
+; keyboard:inst|keyMap:inst3|state.dEnd  ; Lost fanout                                ;
+; Total Number of Removed Registers = 12 ;                                            ;
++----------------------------------------+--------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                       ;
-+-------------------------------------------------+---------------------------+-----------------------------------------------------+
-; Register name                                   ; Reason for Removal        ; Registers Removed due to This Register              ;
-+-------------------------------------------------+---------------------------+-----------------------------------------------------+
-; keyboard:inst|keyInterface:inst1|\handshake:ack ; Stuck at GND              ; keyboard:inst|keyInterface:inst1|\handshake:dir[1], ;
-;                                                 ; due to stuck port data_in ; keyboard:inst|keyInterface:inst1|\handshake:dir[0], ;
-;                                                 ;                           ; keyboard:inst|keyInterface:inst1|newMove            ;
-; keyboard:inst|keyMap:inst3|key                  ; Lost Fanouts              ; keyboard:inst|keyCapture:ins3t|keyRed               ;
-+-------------------------------------------------+---------------------------+-----------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                  ;
++--------------------------------+--------------------+----------------------------------------+
+; Register name                  ; Reason for Removal ; Registers Removed due to This Register ;
++--------------------------------+--------------------+----------------------------------------+
+; keyboard:inst|keyMap:inst3|key ; Lost Fanouts       ; keyboard:inst|keyCapture:ins3t|keyRed  ;
++--------------------------------+--------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -298,15 +291,6 @@ Encoding Type:  One-Hot
 ; Number of registers using Clock Enable       ; 21    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |2048|keyboard:inst|keyInterface:inst1|\handshake:dir[1] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -332,31 +316,31 @@ Encoding Type:  One-Hot
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Thu Apr 17 07:56:17 2014
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Thu Apr 17 09:51:49 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 2048 -c 2048
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/dreg.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/jacob/documents/github/ece385/lab9_vga_vhdl_spring2014/dreg.vhd
     Info (12022): Found design unit 1: Dreg-Behavioral
     Info (12023): Found entity 1: Dreg
-Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/psclksample.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/jacob/documents/github/ece385/lab9_vga_vhdl_spring2014/psclksample.vhd
     Info (12022): Found design unit 1: psclk-Behavioral
     Info (12023): Found entity 1: psclk
-Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/clkdiv.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/jacob/documents/github/ece385/lab9_vga_vhdl_spring2014/clkdiv.vhd
     Info (12022): Found design unit 1: clkDiv-Behavioral
     Info (12023): Found entity 1: clkDiv
-Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9/hexdriver.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/jacob/documents/github/ece385/lab9/hexdriver.vhd
     Info (12022): Found design unit 1: hexDriver-behavioral
     Info (12023): Found entity 1: hexDriver
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/keyboard.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/jacob/documents/github/ece385/lab9_vga_vhdl_spring2014/keyboard.bdf
     Info (12023): Found entity 1: keyboard
-Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/keymap.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/jacob/documents/github/ece385/lab9_vga_vhdl_spring2014/keymap.vhd
     Info (12022): Found design unit 1: keyMap-Behavioral
     Info (12023): Found entity 1: keyMap
-Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/keycapt.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/jacob/documents/github/ece385/lab9_vga_vhdl_spring2014/keycapt.vhd
     Info (12022): Found design unit 1: keyCapture-Behavioral
     Info (12023): Found entity 1: keyCapture
-Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/vga_controller.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/jacob/documents/github/ece385/lab9_vga_vhdl_spring2014/vga_controller.vhd
     Info (12022): Found design unit 1: vga_controller-Behavioral
     Info (12023): Found entity 1: vga_controller
 Info (12021): Found 1 design units, including 1 entities, in source file 2048.bdf
@@ -373,7 +357,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file keyinte
 Info (12021): Found 2 design units, including 1 entities, in source file gamelogic.vhd
     Info (12022): Found design unit 1: gameLogic-behavioral
     Info (12023): Found entity 1: gameLogic
-Warning (12019): Can't analyze file -- file keyboard.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file gameboard1.vhd
     Info (12022): Found design unit 1: GameBoard1-Behavioral
     Info (12023): Found entity 1: GameBoard1
@@ -391,21 +374,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file vga_con
     Info (12023): Found entity 1: vga_controllerz
 Info (12127): Elaborating entity "2048" for the top level hierarchy
 Warning (275043): Pin "freeTiles[15..0]" is missing source
-Warning (275009): Pin "moveAck" not connected
-Warning (275008): Primitive "NOT" of instance "inst5" not used
-Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:inst"
-Warning (275009): Pin "keyAck" not connected
-Info (12128): Elaborating entity "keyInterface" for hierarchy "keyboard:inst|keyInterface:inst1"
-Info (12128): Elaborating entity "keyMap" for hierarchy "keyboard:inst|keyMap:inst3"
-Warning (10492): VHDL Process Statement warning at keymap.vhd(28): signal "key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "clkDiv" for hierarchy "keyboard:inst|clkDiv:inst"
-Info (12128): Elaborating entity "keyCapture" for hierarchy "keyboard:inst|keyCapture:ins3t"
-Warning (10492): VHDL Process Statement warning at keyCapt.vhd(35): signal "keyRed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at keyCapt.vhd(38): signal "keyAck" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at keyCapt.vhd(18): inferring latch(es) for signal or variable "keyReady", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "keyReady" at keyCapt.vhd(18)
-Info (12128): Elaborating entity "psclk" for hierarchy "keyboard:inst|psclk:inst2"
-Info (12128): Elaborating entity "Dreg" for hierarchy "keyboard:inst|psclk:inst2|Dreg:reg1"
 Info (12128): Elaborating entity "GameBoard1" for hierarchy "GameBoard1:inst6"
 Warning (10541): VHDL Signal Declaration warning at GameBoard1.vhd(26): used implicit default value for signal "moveAck" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "vga_controllerz" for hierarchy "GameBoard1:inst6|vga_controllerz:vgaSync_instance"
@@ -415,22 +383,25 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "outboard" into its bus
 Info (12128): Elaborating entity "Color_Mapper" for hierarchy "GameBoard1:inst6|Color_Mapper:color_instance"
 Warning (10540): VHDL Signal Declaration warning at Color_Mapper.vhd(19): used explicit default value for signal "Tile_on" because signal was never assigned a value
+Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:inst"
+Info (12128): Elaborating entity "keyMap" for hierarchy "keyboard:inst|keyMap:inst3"
+Warning (10492): VHDL Process Statement warning at keymap.vhd(28): signal "key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "clkDiv" for hierarchy "keyboard:inst|clkDiv:inst"
+Info (12128): Elaborating entity "keyCapture" for hierarchy "keyboard:inst|keyCapture:ins3t"
+Warning (10631): VHDL Process Statement warning at keyCapt.vhd(18): inferring latch(es) for signal or variable "keyReady", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "keyReady" at keyCapt.vhd(18)
+Info (12128): Elaborating entity "psclk" for hierarchy "keyboard:inst|psclk:inst2"
+Info (12128): Elaborating entity "Dreg" for hierarchy "keyboard:inst|psclk:inst2|Dreg:reg1"
 Info (12128): Elaborating entity "hexDriver" for hierarchy "hexDriver:inst3"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "newMove" is stuck at GND
     Warning (13410): Pin "sync" is stuck at GND
     Warning (13410): Pin "Blue[9]" is stuck at GND
     Warning (13410): Pin "Blue[8]" is stuck at GND
     Warning (13410): Pin "Blue[7]" is stuck at GND
-    Warning (13410): Pin "Blue[6]" is stuck at GND
-    Warning (13410): Pin "Blue[5]" is stuck at GND
-    Warning (13410): Pin "Blue[4]" is stuck at GND
-    Warning (13410): Pin "Blue[3]" is stuck at GND
+    Warning (13410): Pin "Blue[3]" is stuck at VCC
     Warning (13410): Pin "Blue[2]" is stuck at GND
     Warning (13410): Pin "Blue[1]" is stuck at GND
     Warning (13410): Pin "Blue[0]" is stuck at GND
-    Warning (13410): Pin "dir[1]" is stuck at GND
-    Warning (13410): Pin "dir[0]" is stuck at GND
     Warning (13410): Pin "freeTiles[15]" is stuck at GND
     Warning (13410): Pin "freeTiles[14]" is stuck at GND
     Warning (13410): Pin "freeTiles[13]" is stuck at GND
@@ -447,22 +418,9 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "freeTiles[2]" is stuck at GND
     Warning (13410): Pin "freeTiles[1]" is stuck at GND
     Warning (13410): Pin "freeTiles[0]" is stuck at GND
-    Warning (13410): Pin "Green[9]" is stuck at VCC
-    Warning (13410): Pin "Green[8]" is stuck at VCC
-    Warning (13410): Pin "Green[7]" is stuck at VCC
-    Warning (13410): Pin "Green[6]" is stuck at VCC
-    Warning (13410): Pin "Green[5]" is stuck at VCC
-    Warning (13410): Pin "Green[4]" is stuck at VCC
-    Warning (13410): Pin "Green[3]" is stuck at VCC
-    Warning (13410): Pin "Green[2]" is stuck at VCC
-    Warning (13410): Pin "Green[1]" is stuck at VCC
-    Warning (13410): Pin "Green[0]" is stuck at VCC
+    Warning (13410): Pin "Green[9]" is stuck at GND
     Warning (13410): Pin "Red[9]" is stuck at GND
-    Warning (13410): Pin "Red[8]" is stuck at GND
-    Warning (13410): Pin "Red[7]" is stuck at GND
-    Warning (13410): Pin "Red[6]" is stuck at GND
-    Warning (13410): Pin "Red[5]" is stuck at GND
-    Warning (13410): Pin "Red[4]" is stuck at GND
+    Warning (13410): Pin "Red[4]" is stuck at VCC
     Warning (13410): Pin "Red[3]" is stuck at GND
     Warning (13410): Pin "Red[2]" is stuck at GND
     Warning (13410): Pin "Red[1]" is stuck at GND
@@ -470,16 +428,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (17049): 11 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "moveAck"
-Info (21057): Implemented 175 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 68 output pins
-    Info (21061): Implemented 102 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 67 warnings
-    Info: Peak virtual memory: 488 megabytes
-    Info: Processing ended: Thu Apr 17 07:56:18 2014
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Info (21057): Implemented 176 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 65 output pins
+    Info (21061): Implemented 107 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 500 megabytes
+    Info: Processing ended: Thu Apr 17 09:51:54 2014
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 
