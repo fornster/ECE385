@@ -1,5 +1,5 @@
 EDA Netlist Writer report for 2048
-Wed Apr 16 22:17:22 2014
+Thu Apr 17 00:47:49 2014
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Apr 16 22:17:22 2014 ;
+; EDA Netlist Writer Status ; Successful - Thu Apr 17 00:47:49 2014 ;
 ; Revision Name             ; 2048                                  ;
 ; Top-level Entity Name     ; 2048                                  ;
 ; Family                    ; Cyclone II                            ;
@@ -84,12 +84,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Wed Apr 16 22:17:22 2014
+    Info: Processing started: Thu Apr 17 00:47:49 2014
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off 2048 -c 2048
 Info (204026): Generated files "2048.vho", "2048_fast.vho", "2048_vhd.sdo" and "2048_vhd_fast.sdo" in directory "E:/Documents/ECE385/ECE385/2048/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 380 megabytes
-    Info: Processing ended: Wed Apr 16 22:17:22 2014
+    Info: Processing ended: Thu Apr 17 00:47:49 2014
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

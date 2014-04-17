@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_SIGNED.ALL;
 
 entity keyInterface is
-	port(newKey, MoveAck: in std_logic;
+	port(newKey, MoveAck, clk: in std_logic;
 			keyCode : in std_logic_vector(7 downto 0);
 			keyAck, newMove : out std_logic;
 			keyReset : out std_logic;
@@ -14,18 +14,19 @@ end entity;
 architecture behavioral of keyInterface is
 
 begin
-	handshake : process(newKey, MoveAck, keyCode)
+	handshake : process(newKey, MoveAck, keyCode, clk)
 	--variable currKey : std_logic_vector(7 downto 0) := "00000000";
 	variable move : std_logic := '0';
 	variable reset, ack : std_logic := '0';
 	variable dir : std_logic_vector(1 downto 0) := "00";
 	begin
 		--ack := '0';
-		reset := '0';
-		if(moveAck = '1') then-- and move = '1') then  --Need to figure out handshake protocol
+		
+		if((moveAck = '1') and rising_edge(clk)) then-- and move = '1') then  --Need to figure out handshake protocol
 			move := '0';
 			ack := '1';
-		elsif(newKey = '1' and move = '0') then
+			reset := '0';
+		elsif((newKey = '1') and (move = '0') and rising_edge(clk)) then -- and move = '0'
 			
 			--currKey := keyCode;
 			if(keyCode = "00011011") then --S
