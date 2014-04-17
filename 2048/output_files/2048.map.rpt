@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 2048
-Wed Apr 16 16:26:40 2014
+Wed Apr 16 22:17:09 2014
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -44,16 +44,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 16 16:26:40 2014      ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 16 22:17:09 2014      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; 2048                                       ;
 ; Top-level Entity Name              ; 2048                                       ;
 ; Family                             ; Cyclone II                                 ;
-; Total logic elements               ; 88                                         ;
-;     Total combinational functions  ; 69                                         ;
+; Total logic elements               ; 104                                        ;
+;     Total combinational functions  ; 85                                         ;
 ;     Dedicated logic registers      ; 43                                         ;
 ; Total registers                    ; 43                                         ;
-; Total pins                         ; 22                                         ;
+; Total pins                         ; 38                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -170,6 +170,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; ../lab9_vga_vhdl_Spring2014/keymap.vhd      ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9_vga_vhdl_Spring2014/keymap.vhd      ;         ;
 ; ../lab9_vga_vhdl_Spring2014/keyCapt.vhd     ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/lab9_vga_vhdl_Spring2014/keyCapt.vhd     ;         ;
 ; 2048.bdf                                    ; yes             ; User Block Diagram/Schematic File  ; E:/Documents/ECE385/ECE385/2048/2048.bdf                            ;         ;
+; gameBoardH.vhd                              ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/2048/gameBoardH.vhd                      ;         ;
 ; keyInterface.vhd                            ; yes             ; User VHDL File                     ; E:/Documents/ECE385/ECE385/2048/keyInterface.vhd                    ;         ;
 +---------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
 
@@ -179,28 +180,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 88    ;
+; Estimated Total logic elements              ; 104   ;
 ;                                             ;       ;
-; Total combinational functions               ; 69    ;
+; Total combinational functions               ; 85    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 37    ;
-;     -- 3 input functions                    ; 15    ;
+;     -- 4 input functions                    ; 44    ;
+;     -- 3 input functions                    ; 24    ;
 ;     -- <=2 input functions                  ; 17    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 62    ;
+;     -- normal mode                          ; 78    ;
 ;     -- arithmetic mode                      ; 7     ;
 ;                                             ;       ;
 ; Total registers                             ; 43    ;
 ;     -- Dedicated logic registers            ; 43    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 22    ;
+; I/O pins                                    ; 38    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; reset ;
-; Maximum fan-out                             ; 36    ;
-; Total fan-out                               ; 379   ;
-; Average fan-out                             ; 2.83  ;
+; Maximum fan-out                             ; 40    ;
+; Total fan-out                               ; 438   ;
+; Average fan-out                             ; 2.64  ;
 +---------------------------------------------+-------+
 
 
@@ -209,14 +210,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
-; |2048                      ; 69 (0)            ; 43 (0)       ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |2048                                     ;              ;
+; |2048                      ; 85 (0)            ; 43 (0)       ; 0           ; 0            ; 0       ; 0         ; 38   ; 0            ; |2048                                     ;              ;
+;    |gameBoardH:inst8|      ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|gameBoardH:inst8                    ;              ;
 ;    |hexDriver:inst3|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|hexDriver:inst3                     ;              ;
 ;    |hexDriver:inst4|       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|hexDriver:inst4                     ;              ;
-;    |keyboard:inst|         ; 63 (0)            ; 43 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst                       ;              ;
+;    |keyboard:inst|         ; 67 (0)            ; 43 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst                       ;              ;
 ;       |clkDiv:inst|        ; 11 (11)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|clkDiv:inst           ;              ;
 ;       |keyCapture:ins3t|   ; 8 (8)             ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|keyCapture:ins3t      ;              ;
-;       |keyInterface:inst1| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|keyInterface:inst1    ;              ;
-;       |keyMap:inst3|       ; 36 (36)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|keyMap:inst3          ;              ;
+;       |keyInterface:inst1| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|keyInterface:inst1    ;              ;
+;       |keyMap:inst3|       ; 38 (38)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|keyMap:inst3          ;              ;
 ;       |psclk:inst2|        ; 1 (1)             ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|psclk:inst2           ;              ;
 ;          |Dreg:reg1|       ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|psclk:inst2|Dreg:reg1 ;              ;
 ;          |Dreg:reg2|       ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |2048|keyboard:inst|psclk:inst2|Dreg:reg2 ;              ;
@@ -242,18 +244,22 @@ Encoding Type:  One-Hot
 +------------+------------+------------+------------+------------+---------+---------+---------+---------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                            ;
-+----------------------------------------------------+--------------------------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal                              ; Free of Timing Hazards ;
-+----------------------------------------------------+--------------------------------------------------+------------------------+
-; keyboard:inst|keyInterface:inst1|\handshake:move   ; keyboard:inst|keyInterface:inst1|\handshake:move ; yes                    ;
-; keyboard:inst|keyInterface:inst1|\handshake:dir[1] ; keyboard:inst|keyInterface:inst1|\handshake:move ; yes                    ;
-; keyboard:inst|keyInterface:inst1|\handshake:dir[0] ; keyboard:inst|keyInterface:inst1|\handshake:move ; yes                    ;
-; keyboard:inst|keyInterface:inst1|\handshake:ack    ; GND                                              ; yes                    ;
-; keyboard:inst|keyCapture:ins3t|keyReady            ; GND                                              ; yes                    ;
-; Number of user-specified and inferred latches = 5  ;                                                  ;                        ;
-+----------------------------------------------------+--------------------------------------------------+------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                              ;
++----------------------------------------------------+----------------------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                                ; Free of Timing Hazards ;
++----------------------------------------------------+----------------------------------------------------+------------------------+
+; keyboard:inst|keyInterface:inst1|\handshake:move   ; keyboard:inst|keyInterface:inst1|\handshake:move   ; yes                    ;
+; keyboard:inst|keyInterface:inst1|\handshake:dir[1] ; keyboard:inst|keyInterface:inst1|\handshake:dir[1] ; yes                    ;
+; keyboard:inst|keyInterface:inst1|\handshake:dir[0] ; keyboard:inst|keyInterface:inst1|\handshake:dir[1] ; yes                    ;
+; gameBoardH:inst8|gbFree[3][0]                      ; gameBoardH:inst8|gbFree[3][0]                      ; yes                    ;
+; gameBoardH:inst8|gbFree[2][0]                      ; gameBoardH:inst8|gbFree[2][0]                      ; yes                    ;
+; gameBoardH:inst8|gbFree[1][0]                      ; gameBoardH:inst8|gbFree[1][0]                      ; yes                    ;
+; gameBoardH:inst8|gbFree[0][0]                      ; keyboard:inst|keyInterface:inst1|\handshake:move   ; yes                    ;
+; keyboard:inst|keyInterface:inst1|\handshake:ack    ; GND                                                ; yes                    ;
+; keyboard:inst|keyCapture:ins3t|keyReady            ; GND                                                ; yes                    ;
+; Number of user-specified and inferred latches = 9  ;                                                    ;                        ;
++----------------------------------------------------+----------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -297,7 +303,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Wed Apr 16 16:26:39 2014
+    Info: Processing started: Wed Apr 16 22:17:07 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 2048 -c 2048
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /documents/ece385/ece385/lab9_vga_vhdl_spring2014/dreg.vhd
@@ -326,8 +332,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file /docume
 Info (12021): Found 1 design units, including 1 entities, in source file 2048.bdf
     Info (12023): Found entity 1: 2048
 Info (12021): Found 2 design units, including 1 entities, in source file gameboardh.vhd
-    Info (12022): Found design unit 1: gameBoard-behavioral
-    Info (12023): Found entity 1: gameBoard
+    Info (12022): Found design unit 1: gameBoardH-behavioral
+    Info (12023): Found entity 1: gameBoardH
 Info (12021): Found 2 design units, including 1 entities, in source file newtile.vhd
     Info (12022): Found design unit 1: newTile-behavioral
     Info (12023): Found entity 1: newTile
@@ -337,14 +343,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file keyinte
 Info (12127): Elaborating entity "2048" for the top level hierarchy
 Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:inst"
 Info (12128): Elaborating entity "keyInterface" for hierarchy "keyboard:inst|keyInterface:inst1"
-Warning (10492): VHDL Process Statement warning at keyInterface.vhd(29): signal "keyCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at keyInterface.vhd(17): inferring latch(es) for signal or variable "move", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at keyInterface.vhd(17): inferring latch(es) for signal or variable "ack", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at keyInterface.vhd(17): inferring latch(es) for signal or variable "dir", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "handshake:dir[0]" at keyInterface.vhd(24)
-Info (10041): Inferred latch for "handshake:dir[1]" at keyInterface.vhd(24)
-Info (10041): Inferred latch for "handshake:ack" at keyInterface.vhd(24)
-Info (10041): Inferred latch for "handshake:move" at keyInterface.vhd(24)
+Info (10041): Inferred latch for "handshake:dir[0]" at keyInterface.vhd(25)
+Info (10041): Inferred latch for "handshake:dir[1]" at keyInterface.vhd(25)
+Info (10041): Inferred latch for "handshake:ack" at keyInterface.vhd(25)
+Info (10041): Inferred latch for "handshake:move" at keyInterface.vhd(25)
 Info (12128): Elaborating entity "keyMap" for hierarchy "keyboard:inst|keyMap:inst3"
 Warning (10492): VHDL Process Statement warning at keymap.vhd(28): signal "key" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "clkDiv" for hierarchy "keyboard:inst|clkDiv:inst"
@@ -355,26 +360,64 @@ Warning (10631): VHDL Process Statement warning at keyCapt.vhd(18): inferring la
 Info (10041): Inferred latch for "keyReady" at keyCapt.vhd(18)
 Info (12128): Elaborating entity "psclk" for hierarchy "keyboard:inst|psclk:inst2"
 Info (12128): Elaborating entity "Dreg" for hierarchy "keyboard:inst|psclk:inst2|Dreg:reg1"
+Info (12128): Elaborating entity "gameBoardH" for hierarchy "gameBoardH:inst8"
+Warning (10445): VHDL Subtype or Type Declaration warning at gameBoardH.vhd(21): subtype or type has null range
+Warning (10541): VHDL Signal Declaration warning at gameBoardH.vhd(13): used implicit default value for signal "needTile" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10631): VHDL Process Statement warning at gameBoardH.vhd(20): inferring latch(es) for signal or variable "gb", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at gameBoardH.vhd(20): inferring latch(es) for signal or variable "gbFree", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at gameBoardH.vhd(20): inferring latch(es) for signal or variable "ack", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "ack" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[3][3]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[3][2]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[3][1]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[3][0]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[2][3]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[2][2]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[2][1]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[2][0]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[1][3]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[1][2]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[1][1]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[1][0]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[0][3]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[0][2]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[0][1]" at gameBoardH.vhd(30)
+Info (10041): Inferred latch for "gbFree[0][0]" at gameBoardH.vhd(30)
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "gb" into its bus
 Info (12128): Elaborating entity "hexDriver" for hierarchy "hexDriver:inst3"
-Warning (13012): Latch keyboard:inst|keyInterface:inst1|\handshake:move has unsafe behavior
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal keyboard:inst|keyInterface:inst1|\handshake:move
 Warning (13012): Latch keyboard:inst|keyInterface:inst1|\handshake:dir[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal keyboard:inst|keyMap:inst3|state.s
 Warning (13012): Latch keyboard:inst|keyInterface:inst1|\handshake:dir[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal keyboard:inst|keyMap:inst3|state.w
+Warning (13012): Latch gameBoardH:inst8|gbFree[2][0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal gameBoardH:inst8|gbFree[2][0]
+Warning (13012): Latch gameBoardH:inst8|gbFree[1][0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal gameBoardH:inst8|gbFree[1][0]
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "freeTiles[15]" is stuck at GND
+    Warning (13410): Pin "freeTiles[14]" is stuck at GND
+    Warning (13410): Pin "freeTiles[13]" is stuck at GND
+    Warning (13410): Pin "freeTiles[11]" is stuck at GND
+    Warning (13410): Pin "freeTiles[10]" is stuck at GND
+    Warning (13410): Pin "freeTiles[9]" is stuck at GND
+    Warning (13410): Pin "freeTiles[7]" is stuck at GND
+    Warning (13410): Pin "freeTiles[6]" is stuck at GND
+    Warning (13410): Pin "freeTiles[5]" is stuck at GND
+    Warning (13410): Pin "freeTiles[3]" is stuck at GND
+    Warning (13410): Pin "freeTiles[2]" is stuck at GND
+    Warning (13410): Pin "freeTiles[1]" is stuck at GND
     Warning (13410): Pin "keyPressH[1]" is stuck at GND
     Warning (13410): Pin "keyPressL[3]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 144 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 90 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 487 megabytes
-    Info: Processing ended: Wed Apr 16 16:26:40 2014
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 106 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 488 megabytes
+    Info: Processing ended: Wed Apr 16 22:17:09 2014
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

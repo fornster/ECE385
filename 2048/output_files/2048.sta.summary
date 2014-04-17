@@ -3,32 +3,48 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'keyboard:inst|clkDiv:inst|temp'
-Slack : -4.176
-TNS   : -32.429
+Slack : -3.862
+TNS   : -28.420
+
+Type  : Slow Model Setup 'keyboard:inst|keyInterface:inst1|\handshake:move'
+Slack : -2.129
+TNS   : -8.702
 
 Type  : Slow Model Setup 'keyboard:inst|psclk:inst2|Dreg:reg1|Q'
-Slack : -1.425
-TNS   : -16.265
+Slack : -1.571
+TNS   : -16.498
 
 Type  : Slow Model Setup 'clk'
-Slack : -0.964
-TNS   : -5.948
+Slack : -0.941
+TNS   : -5.407
 
-Type  : Slow Model Setup 'keyboard:inst|keyInterface:inst1|\handshake:ack'
-Slack : 0.296
-TNS   : 0.000
+Type  : Slow Model Setup 'gameBoardH:inst8|gbFree[2][0]'
+Slack : -0.934
+TNS   : -0.934
+
+Type  : Slow Model Setup 'moveAck'
+Slack : -0.378
+TNS   : -0.741
 
 Type  : Slow Model Hold 'clk'
-Slack : -2.537
-TNS   : -2.537
-
-Type  : Slow Model Hold 'keyboard:inst|keyInterface:inst1|\handshake:ack'
-Slack : -0.634
-TNS   : -1.028
+Slack : -2.538
+TNS   : -2.538
 
 Type  : Slow Model Hold 'keyboard:inst|clkDiv:inst|temp'
-Slack : -0.410
-TNS   : -0.410
+Slack : -1.675
+TNS   : -1.912
+
+Type  : Slow Model Hold 'gameBoardH:inst8|gbFree[2][0]'
+Slack : -1.003
+TNS   : -1.003
+
+Type  : Slow Model Hold 'keyboard:inst|keyInterface:inst1|\handshake:move'
+Slack : -0.451
+TNS   : -1.196
+
+Type  : Slow Model Hold 'moveAck'
+Slack : 0.205
+TNS   : 0.000
 
 Type  : Slow Model Hold 'keyboard:inst|psclk:inst2|Dreg:reg1|Q'
 Slack : 0.391
@@ -46,6 +62,10 @@ Type  : Slow Model Minimum Pulse Width 'clk'
 Slack : -1.380
 TNS   : -10.380
 
+Type  : Slow Model Minimum Pulse Width 'moveAck'
+Slack : -1.222
+TNS   : -1.222
+
 Type  : Slow Model Minimum Pulse Width 'keyboard:inst|psclk:inst2|Dreg:reg1|Q'
 Slack : -0.500
 TNS   : -22.000
@@ -54,53 +74,77 @@ Type  : Slow Model Minimum Pulse Width 'keyboard:inst|clkDiv:inst|temp'
 Slack : -0.500
 TNS   : -12.000
 
-Type  : Slow Model Minimum Pulse Width 'keyboard:inst|keyInterface:inst1|\handshake:ack'
+Type  : Slow Model Minimum Pulse Width 'gameBoardH:inst8|gbFree[2][0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'keyboard:inst|keyInterface:inst1|\handshake:move'
 Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast Model Setup 'keyboard:inst|clkDiv:inst|temp'
-Slack : -1.906
-TNS   : -13.672
+Slack : -1.739
+TNS   : -11.658
+
+Type  : Fast Model Setup 'keyboard:inst|keyInterface:inst1|\handshake:move'
+Slack : -0.598
+TNS   : -1.922
 
 Type  : Fast Model Setup 'keyboard:inst|psclk:inst2|Dreg:reg1|Q'
-Slack : -0.177
-TNS   : -1.416
+Slack : -0.255
+TNS   : -2.040
+
+Type  : Fast Model Setup 'gameBoardH:inst8|gbFree[2][0]'
+Slack : -0.041
+TNS   : -0.041
 
 Type  : Fast Model Setup 'clk'
-Slack : 0.102
+Slack : 0.105
 TNS   : 0.000
 
-Type  : Fast Model Setup 'keyboard:inst|keyInterface:inst1|\handshake:ack'
-Slack : 0.584
+Type  : Fast Model Setup 'moveAck'
+Slack : 0.148
 TNS   : 0.000
 
 Type  : Fast Model Hold 'clk'
-Slack : -1.581
-TNS   : -1.581
+Slack : -1.582
+TNS   : -1.582
 
 Type  : Fast Model Hold 'keyboard:inst|clkDiv:inst|temp'
-Slack : -0.297
-TNS   : -0.498
+Slack : -0.902
+TNS   : -1.690
 
-Type  : Fast Model Hold 'keyboard:inst|keyInterface:inst1|\handshake:ack'
-Slack : -0.155
-TNS   : -0.186
+Type  : Fast Model Hold 'gameBoardH:inst8|gbFree[2][0]'
+Slack : -0.443
+TNS   : -0.443
+
+Type  : Fast Model Hold 'keyboard:inst|keyInterface:inst1|\handshake:move'
+Slack : -0.225
+TNS   : -0.584
 
 Type  : Fast Model Hold 'keyboard:inst|psclk:inst2|Dreg:reg1|Q'
 Slack : 0.215
 TNS   : 0.000
 
+Type  : Fast Model Hold 'moveAck'
+Slack : 0.363
+TNS   : 0.000
+
 Type  : Fast Model Recovery 'keyboard:inst|psclk:inst2|Dreg:reg1|Q'
-Slack : 0.297
+Slack : 0.296
 TNS   : 0.000
 
 Type  : Fast Model Removal 'keyboard:inst|psclk:inst2|Dreg:reg1|Q'
-Slack : 0.583
+Slack : 0.584
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -1.380
 TNS   : -10.380
+
+Type  : Fast Model Minimum Pulse Width 'moveAck'
+Slack : -1.222
+TNS   : -1.222
 
 Type  : Fast Model Minimum Pulse Width 'keyboard:inst|psclk:inst2|Dreg:reg1|Q'
 Slack : -0.500
@@ -110,7 +154,11 @@ Type  : Fast Model Minimum Pulse Width 'keyboard:inst|clkDiv:inst|temp'
 Slack : -0.500
 TNS   : -12.000
 
-Type  : Fast Model Minimum Pulse Width 'keyboard:inst|keyInterface:inst1|\handshake:ack'
+Type  : Fast Model Minimum Pulse Width 'gameBoardH:inst8|gbFree[2][0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'keyboard:inst|keyInterface:inst1|\handshake:move'
 Slack : 0.500
 TNS   : 0.000
 
