@@ -1,0 +1,134 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 264 272)
+	(text "GameBoard1" (rect 8 1 71 13)(font "Arial" ))
+	(text "inst" (rect 8 80 25 92)(font "Arial" ))
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 32 40 47 54)(font "Arial" (font_size 8)))
+		(text "clk" (rect 32 40 47 54)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 24 48))
+	)
+	(port
+		(pt 0 72)
+		(input)
+		(text "reset" (rect 24 64 53 78)(font "Arial" (font_size 8)))
+		(text "reset" (rect 24 64 53 78)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 16 72))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "newKey" (rect 24 152 72 166)(font "Arial" (font_size 8)))
+		(text "newKey" (rect 32 152 80 166)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "keyCode[7..0]" (rect 32 112 109 126)(font "Arial" (font_size 8)))
+		(text "keyCode[7..0]" (rect 32 112 109 126)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 24 120))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "tileMove[1..0]" (rect 32 104 106 118)(font "Arial" (font_size 8)))
+		(text "tileMove[1..0]" (rect 32 88 106 102)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 24 96))
+	)
+	(port
+		(pt 200 32)
+		(output)
+		(text "Red[9..0]" (rect 149 24 199 38)(font "Arial" (font_size 8)))
+		(text "Red[9..0]" (rect 136 24 186 38)(font "Arial" (font_size 8)))
+		(line (pt 200 32)(pt 184 32))
+	)
+	(port
+		(pt 200 48)
+		(output)
+		(text "Green[9..0]" (rect 149 40 212 54)(font "Arial" (font_size 8)))
+		(text "Green[9..0]" (rect 120 40 183 54)(font "Arial" (font_size 8)))
+		(line (pt 200 48)(pt 184 48))
+	)
+	(port
+		(pt 200 64)
+		(output)
+		(text "Blue[9..0]" (rect 149 56 202 70)(font "Arial" (font_size 8)))
+		(text "Blue[9..0]" (rect 128 56 181 70)(font "Arial" (font_size 8)))
+		(line (pt 200 64)(pt 184 64))
+	)
+	(port
+		(pt 200 80)
+		(output)
+		(text "VGA_clk" (rect 149 72 199 86)(font "Arial" (font_size 8)))
+		(text "VGA_clk" (rect 128 72 178 86)(font "Arial" (font_size 8)))
+		(line (pt 200 80)(pt 184 80))
+	)
+	(port
+		(pt 200 104)
+		(output)
+		(text "sync" (rect 149 96 177 110)(font "Arial" (font_size 8)))
+		(text "sync" (rect 149 96 177 110)(font "Arial" (font_size 8)))
+		(line (pt 200 104)(pt 184 104))
+	)
+	(port
+		(pt 0 144)
+		(output)
+		(text "keyAck" (rect 32 152 74 166)(font "Arial" (font_size 8)))
+		(text "keyAck" (rect 32 136 74 150)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 24 144))
+	)
+	(port
+		(pt 200 176)
+		(output)
+		(text "moveAck" (rect 149 168 202 182)(font "Arial" (font_size 8)))
+		(text "moveAck" (rect 128 168 181 182)(font "Arial" (font_size 8)))
+		(line (pt 200 176)(pt 184 176))
+	)
+	(port
+		(pt 200 120)
+		(output)
+		(text "blank" (rect 149 120 178 134)(font "Arial" (font_size 8)))
+		(text "blank" (rect 152 112 181 126)(font "Arial" (font_size 8)))
+		(line (pt 200 120)(pt 184 120))
+	)
+	(port
+		(pt 200 136)
+		(output)
+		(text "vs" (rect 149 144 163 158)(font "Arial" (font_size 8)))
+		(text "vs" (rect 160 128 174 142)(font "Arial" (font_size 8)))
+		(line (pt 200 136)(pt 184 136))
+	)
+	(port
+		(pt 200 160)
+		(output)
+		(text "hs" (rect 149 168 163 182)(font "Arial" (font_size 8)))
+		(text "hs" (rect 168 152 182 166)(font "Arial" (font_size 8)))
+		(line (pt 200 160)(pt 184 160))
+	)
+	(drawing
+		(rectangle (rect 16 16 184 200))
+	)
+)

@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 200 144)
+	(rect 64 64 248 232)
 	(text "keyboard" (rect 5 0 58 14)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 112 25 124)(font "Arial" ))
 	(port
@@ -59,6 +59,13 @@ applicable agreement for further details.
 		(line (pt 0 96)(pt 16 96))
 	)
 	(port
+		(pt 184 104)
+		(input)
+		(text "keyAck" (rect 133 112 175 126)(font "Arial" (font_size 8)))
+		(text "keyAck" (rect 112 96 154 110)(font "Arial" (font_size 8)))
+		(line (pt 184 104)(pt 168 104))
+	)
+	(port
 		(pt 184 32)
 		(output)
 		(text "KeyData[7..0]" (rect 0 0 76 14)(font "Arial" (font_size 8)))
@@ -79,7 +86,14 @@ applicable agreement for further details.
 		(text "moveDir[1..0]" (rect 89 59 163 73)(font "Arial" (font_size 8)))
 		(line (pt 184 64)(pt 168 64)(line_width 3))
 	)
+	(port
+		(pt 184 88)
+		(output)
+		(text "KeyCode[7..0]" (rect 125 80 205 94)(font "Arial" (font_size 8)))
+		(text "KeyCode[7..0]" (rect 88 80 168 94)(font "Arial" (font_size 8)))
+		(line (pt 184 88)(pt 160 88))
+	)
 	(drawing
-		(rectangle (rect 16 16 168 112))
+		(rectangle (rect 16 16 168 144))
 	)
 )

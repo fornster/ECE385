@@ -26,7 +26,7 @@ begin
 			move := '0';
 			ack := '1';
 			reset := '0';
-		elsif((newKey = '1') and (move = '0') and rising_edge(clk)) then -- and move = '0'
+		elsif((newKey = '1') and rising_edge(clk)) then -- and move = '0'
 			
 			--currKey := keyCode;
 			if(keyCode = "00011011") then --S

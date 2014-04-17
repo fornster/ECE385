@@ -34,45 +34,46 @@ begin
 					gbFree(index, jndex) := '0';
 				end loop;
 			end loop;
-		else if ((move = '1') and rising_edge(clk)) then
-			ack := '1';
-			gb(0,0) := "00000000001";
-			gbFree(0,0) := '1';
-			if(tileMove = "00") then --down
-				for index in  0 to 3 loop
-					for jndex in 2 downto 0 loop
-						if(gbFree(jndex, index) = '1') then
-							for kndex in jndex + 1 to 3 loop
-								if(gbFree(kndex, index) = '0') then
-									gbFree(kndex - 1, index) := '0';
-									gbFree(kndex, index) := '1';
-									gb(kndex, index) := gb(kndex-1, index);
-									gb(kndex-1, index) := "00000000000";
-								end if;
-							end loop;
-						end if;
-					end loop;
+		--elsif ((move = '1') and rising_edge(clk)) then
+			--ack := '1';
+			--gb(0,0) := "00000000001";
+			--gbFree(0,0) := '1';
+			--if(tileMove = "00") then --down
+				--for index in  0 to 3 loop
+					--for jndex in 2 downto 0 loop
+						--if(gbFree(jndex, index) = '1') then
+							--for kndex in jndex + 1 to 3 loop
+								--if(gbFree(kndex, index) = '0') then
+									--gbFree(kndex - 1, index) := '0';
+									--gbFree(kndex, index) := '1';
+									--gb(kndex, index) := gb(kndex-1, index);
+									--gb(kndex-1, index) := "00000000000";
+								--end if;
+							--end loop;
+						--end if;
+					--end loop;
+				--end loop; 
+			--end if;
+		elsif(tileMove = "01") then
+			for index in  0 to 3 loop
+				for jndex in 2 downto 0 loop
+					if(gbFree(jndex, index) = '1') then
+						for kndex in jndex + 1 to 3 loop
+							if(gbFree(kndex, index) = '0') then
+								gbFree(kndex - 1, index) := '0';
+								gbFree(kndex, index) := '1';
+								gb(kndex, index) := gb(kndex-1, index);
+								gb(kndex-1, index) := "00000000000";
+							end if;
+						end loop;
+					end if;
 				end loop;
-			elsif(tileMove = "01") then
-				for index in  0 to 3 loop
-					for jndex in 2 downto 0 loop
-						if(gbFree(jndex, index) = '1') then
-							for kndex in jndex + 1 to 3 loop
-								if(gbFree(kndex, index) = '0') then
-									gbFree(kndex - 1, index) := '0';
-									gbFree(kndex, index) := '1';
-									gb(kndex, index) := gb(kndex-1, index);
-									gb(kndex-1, index) := "00000000000";
-								end if;
-							end loop;
-						end if;
-					end loop;
-				end loop;
-			end if;
+			end loop;
+		--end if;
 		else
 			ack := '0';
 		end if;
-		end if;
+		--end if;
 		moveAck <= ack;
 		freeTiles(0) <= gbFree(0, 0);
 		freeTiles(1) <= gbFree(0, 1);
